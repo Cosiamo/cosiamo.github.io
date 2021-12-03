@@ -4,8 +4,8 @@
 >>>> ##### Use and contribute to shared and open GitHub repositories
 >>>> ##### Gather data and conduct analysis to draw insights
 >>> ### Software Engineering Fundamentals
->>>> ##### [Perform software testing and problem solving](#Software-Testing-with-**Jest**) 
->>>> ##### [Perform system scaling and security](#System-Scaling-and-Security-with-Enzyme-&&-Jest)
+>>>> ##### [Perform software testing and problem solving](#Software Testing with **Jest**) 
+>>>> ##### [Perform system scaling and security](#System Scaling and Security with Enzyme && Jest)
 >>> ### DevOps
 >>>> ##### Perform continuous integration of code
 >>>> ##### Perform continuous delivery of code
