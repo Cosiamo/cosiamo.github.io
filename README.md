@@ -4,8 +4,8 @@
 >>>> ##### Use and contribute to shared and open GitHub repositories
 >>>> ##### Gather data and conduct analysis to draw insights
 >>> ### Software Engineering Fundamentals
->>>> ##### [Perform software testing and problem solving](#Software Testing with **Jest**) 
->>>> ##### [Perform system scaling and security](#System Scaling and Security with Enzyme && Jest)
+>>>> ##### [Perform software testing and problem solving](#software-testing-with-jest) 
+>>>> ##### [Perform system scaling and security](#system-scaling-and-security-with-enzyme-and-jest)
 >>> ### DevOps
 >>>> ##### Perform continuous integration of code
 >>>> ##### Perform continuous delivery of code
@@ -103,7 +103,7 @@ The assertion function and Jest method basically replace the "if statement".
 
 ---
 
-## System Scaling and Security with Enzyme && Jest
+## System Scaling and Security with Enzyme and Jest
 
 One if the problems with scaling an application is that the larger it becomes, more vulnerabilities and bugs can be overlooked. For example, if you're creating accounting software with React JS, the most common testing tool is Jest but it doesn't scale well whenever you need to test multiple components. That's where Enzyme comes in. It was created and still maintained by Airbnb for the purpose of scaling out testing in React applications and to work along side Jest.
 
