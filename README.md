@@ -12,6 +12,7 @@
 >>>> ##### Implement metrics and measurement
 >>> ### Platforms, Services, and Solutions
 >>> ##### Use logging and monitoring tools
+
 >> ## Competencies 
 >>> ### DevOps
 >>>> ##### Understand and demonstrate DevOps automation
@@ -56,10 +57,10 @@ A few important things it does are:
 - Snapshot testing
 - Create Mock functions
 - Exceptions (Jest methods) that have great syntaxing
--- .toBe()
--- .toBeCloseTo()
--- .toEqual()
--- .toMatchSnapshot()
+	- .toBe()
+	- .toBeCloseTo()
+	- .toEqual()
+	- .toMatchSnapshot()
 - and much more...
 
 Jest offers a set of global variables, the most important one being `test`.
@@ -171,7 +172,7 @@ Now both of these test cases can make sure that the user is indeed providing the
 - `shallow` is calling the component that we want to test
 - `.find('input')` is looking for an input tag in the component
 - `.at(1)` is searching for the specific input tag that we want to test
--- because there are 2 inputs, we want to test the one that calls for `onAmountChange`. Since that is the second input tag, we pass the index of 1 as the argument
+	- because there are 2 inputs, we want to test the one that calls for `onAmountChange`. Since that is the second input tag, we pass the index of 1 as the argument
 - `.simulate('change', { target: {value} });` simulates the changing the the target value with the `value` variable that was defined.
 
 This method makes it much easier to test the functionality of the code as the application grows larger and becomes more complex.
