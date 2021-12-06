@@ -25,7 +25,7 @@
 >>> - Understand and demonstrate feature decoupling
 >>> 
 >>> ### Platforms, Services, and Solutions
->>> - Understand and demonstrate knowledge of cloud computing fundamentals, including the variuos tools, services and principles
+>>> - Understand and demonstrate knowledge of cloud computing fundamentals, including the various tools, services and principles
 >>> - Understand and demonstrate the design patterns and practices for building cloud native services
 >>> - Understand and demonstrate the use of logging and monitoring tools and infrastructure
 >>> - Understand the need for mobility and migration of data from on-premise to cloud solutions, and the implications
