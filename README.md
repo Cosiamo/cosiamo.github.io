@@ -226,7 +226,7 @@ There are many reasons why you should write clean code, the most important reaso
 - Document code
 	- You don't have to just add a `README.md` or `README.txt` file in order to document your code. You can also add comments or even let the code "document itself" by having variable names properly describe what they're doing (refer back to naming conventions).
 - Avoid abbreviations
-- When in doubt, follow the SOLID principle
+- When in doubt, follow the **SOLID** principle
 	- Created by *Robert C. Martin* in order to to have a coding standard for Object-Oriented Programming. It stands for:
 		- **S.**olid responsibility principle
 		- **O.**pen Closed Principle
