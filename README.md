@@ -55,7 +55,7 @@
 >>> - Understand and manage technical debt
 >>> - Understand and navigate the complexity associated with enterprise-level devlopment
 >>> - Understand how to use version control for all elements of the software delivery lifecycle
->>> - Understand, articulate, and demonstrate clean coding behaviors
+>>> - [Understand, articulate, and demonstrate clean coding behaviors](#understand-articulate-and-demonstrate-clean-coding-behaviors)
 
 ---
 
@@ -213,3 +213,56 @@ This method makes it much easier to test the functionality of the code as the ap
 
 ---
 
+# Understand, articulate, and demonstrate clean coding behaviors
+
+There are many reasons why you should write clean code, the most important reason is the readability of your code. Reading code can be much more difficult than writing code. Whether it's your coworkers, contributors to your open source project, or even yourself if your're refactoring code that you originally wrote weeks ago.
+
+#### There are few techniques to writing cleaner code:
+
+- Naming Conventions
+	- Decide how you'll name your variables and stick to a set of rules.
+	- Keep it simple, make your variables understandable to other people.
+- Don't repeat yourself
+- Document code
+	- You don't have to just add a `README.md` or `README.txt` file in order to document your code. You can also add comments or even let the code "document itself" by having variable names properly describe what they're doing (refer back to naming conventions).
+- Avoid abbreviations
+- When in doubt, follow the SOLID principle
+	- Created by *Robert C. Martin* in order to to have a coding standard for Object-Oriented Programming. It stands for:
+		- **S.**olid responsibility principle
+		- **O.**pen Closed Principle
+		- **L.**iskov substitution principle
+		- **I.**nterface segregation principle
+		- **D.**ependency inversion principle
+
+**Example of sloppy code:**
+```javascript
+const thing = {
+	num: [10, 20, 30],
+	otherNum: 2,
+	thing() {
+		return this.num.map((num) => num * this.otherNum);
+	}
+};
+console.log(thing.thing());
+```
+
+Even though this code works, both `thing` variables have no real meaning and the name repeats itself which makes it difficult for other people to understand. The array with the variable name `num` is the exact same syntax as the value 'num', which can cause confusion when reading `this.num.map((num) => num`. What does `otherNum` even do?
+
+**Previous example but written clean coding techniques:**
+```javascript
+// multiply an array of numbers by 2
+const multiplier = {
+	numbers: [10, 20, 30],
+	multiplyBy: 2,
+	multiply() {
+		return this.numbers.map((num) => num * this.multiplyBy);
+	}
+};
+console.log(multiplier.multiply());
+```
+
+This code works the exact same way as the previous example, however, it's much easier to understand what is supposed to do just by simply changing the syntax of the variable names. 
+- The comment leaves a clear note of what this block of code is meant to do
+- The variable names `mutiplier` and `multiply` imply what they're supposed to do and have two distinct names to avoid confusion
+- `numbers` gives a clear distinction from 'num'
+- `multiplyBy` implies that this is the variable that is being multiplied by the array
