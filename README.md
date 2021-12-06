@@ -83,10 +83,10 @@ Jest offers a set of global variables, the most important one being `test`.
 const add = (a,b) => a + b;
 
 test('Should add 2 numbers', () => {
-	const result = add(3,4);
-	if (result !== 7) {
-		throw new Error(`The result was ${result}. Was expecting 7.`)
-	}
+    const result = add(3,4);
+    if (result !== 7) {
+        throw new Error(`The result was ${result}. Was expecting 7.`)
+    }
 });
 ```
 
@@ -105,8 +105,8 @@ To show how it works I'll redo the previous example using an assertion function 
 const add = (a,b) => a + b;
 
 test('Should add 2 numbers', () => {
-	const result = add(3,4);
-	expect(result).toBe(7)
+    const result = add(3,4);
+    expect(result).toBe(7)
 });
 ```
 
@@ -122,10 +122,10 @@ So, in that accounting software that was previously mentioned, if you wanted to 
 
 ```javascript
 onAmountChange = (e) => {
-	const amount = e.target.value;
-	if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
-		this.setState(() => ({amount}));
-	}
+    const amount = e.target.value;
+    if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
+        this.setState(() => ({amount}));
+    }
 };
 ```
 
@@ -135,19 +135,19 @@ The important part for validating that the user input was a dollar amount (only 
 
 ```html
 <form onSubmit={this.onSubmit}>
-	<input
-		type="text"
-		placeholder="Description"
-		autoFocus
-		value={this.state.description}
-		onChange={this.onDescriptionChange}
-	/>
-	<input
-		type="text"
-		placeholder="amount"
-		value={this.state.amount}
-		onChange={this.onAmountChange}
-	/>
+    <input
+	type="text"
+	placeholder="Description"
+	autoFocus
+	value={this.state.description}
+	onChange={this.onDescriptionChange}
+    />
+    <input
+	type="text"
+	placeholder="amount"
+	value={this.state.amount}
+	onChange={this.onAmountChange}
+    />
 ```
 
 
@@ -158,21 +158,21 @@ You would need to have shallow rendering to test the component as well as assert
 
 ```javascript
 test('Should set amount if valid input', () => {
-	const value = '23.50'
-	const wrapper = shallow(<ExpenseForm />);
-	wrapper.find('input').at(1).simulate('change', {
-		target: {value}
- 	});
-	expect(wrapper.state('amount')).toBe(value);
+    const value = '23.50'
+    const wrapper = shallow(<ExpenseForm />);
+    wrapper.find('input').at(1).simulate('change', {
+	target: {value}
+    });
+    expect(wrapper.state('amount')).toBe(value);
 });
 
 test('Should NOT set amount if invalid input', () => {
-	const value = '12.122'
-	const wrapper = shallow(<ExpenseForm />);
-	wrapper.find('input').at(1).simulate('change', {
-		target: {value}
-	});
-	expect(wrapper.state('amount')).toBe('');
+    const value = '12.122'
+    const wrapper = shallow(<ExpenseForm />);
+    wrapper.find('input').at(1).simulate('change', {
+	target: {value}
+    });
+    expect(wrapper.state('amount')).toBe('');
 });
 ```
 
@@ -237,11 +237,11 @@ There are many reasons why you should write clean code, the most important reaso
 **Example of sloppy code:**
 ```javascript
 const thing = {
-	num: [10, 20, 30],
-	otherNum: 2,
-	thing() {
-		return this.num.map((num) => num * this.otherNum);
-	}
+    num: [10, 20, 30],
+    otherNum: 2,
+    thing() {
+	return this.num.map((num) => num * this.otherNum);
+    }
 };
 console.log(thing.thing());
 ```
@@ -252,11 +252,11 @@ Even though this code works, both `thing` variables have no real meaning and the
 ```javascript
 // multiply an array of numbers by 2
 const multiplier = {
-	numbers: [10, 20, 30],
-	multiplyBy: 2,
-	multiply() {
-		return this.numbers.map((num) => num * this.multiplyBy);
-	}
+    numbers: [10, 20, 30],
+    multiplyBy: 2,
+    multiply() {
+	return this.numbers.map((num) => num * this.multiplyBy);
+    }
 };
 console.log(multiplier.multiply());
 ```
