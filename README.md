@@ -41,6 +41,10 @@
 >>> - Understand and model good feedback behaviors
 >>> - Understand, articulate, and demonstrate agile principles and practices
 >>> - Understand, articulate, and demonstrate IBM Design Thinking
+>>>
+>>> ### Professional Skills Development
+>>> - Complete Ways of Thinking module in Apprenticeship Skills Launchpad
+>>> - Complete Ways of Thinking module in Apprenticeship Skills Launchpad
 >>> 
 >>> ### Software Engineering Fundamentals
 >>> - Demonstrate knowledge of key computer programming fundamentals
@@ -55,7 +59,7 @@
 
 ---
 
-## Software Testing with **Jest**
+# Software Testing with **Jest**
 
 Jest is a powerful tool, created and maintained by Facebook, for testing JavaScript code.
 A few important things it does are:
@@ -110,7 +114,7 @@ The assertion function and Jest method basically replace the "if statement".
 
 ---
 
-## System Scaling and Security with Enzyme and Jest
+# System Scaling and Security with Enzyme and Jest
 
 One if the problems with scaling an application is that the larger it becomes, more vulnerabilities and bugs can be overlooked. For example, if you're creating accounting software with React JS, the most common testing tool is Jest but it doesn't scale well whenever you need to test multiple components. That's where Enzyme comes in. It was created and still maintained by Airbnb for the purpose of scaling out testing in React applications and to work along side Jest.
 
@@ -185,3 +189,6 @@ This method makes it much easier to test the functionality of the code as the ap
 
 ---
 
+# Ways of Thinking module
+> ## Business Acumen
+> On the week of Fourth of July I took the “Core Capabilities Fundamentals” class in which we learned the best practices in sales meetings. The class was divided into teams and we were tasked with creating a pitch for a fictional telecommunication merger for the end of the week. We got together on WebEx for the next few days creating a Power Point of our proposal, practicing our presentations, and building team chemistry. We used business acumen to create realistic scenarios for what work would have to entail as well as what the time table would look like in order for the project to be completed. At the end of the week our team ended up winning the competition.
