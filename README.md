@@ -6,7 +6,7 @@
 >>> 
 >>> ### Software Engineering Fundamentals
 >>> - [Perform software testing and problem solving](#software-testing-with-jest) 
->>> - Perform system scaling and security
+>>> - [Perform system scaling and security](#scaling-applications-with-apis-and-how-to-secure-them)
 >>> 
 >>> ### DevOps
 >>> - Perform continuous integration of code
@@ -111,6 +111,71 @@ test('Should add 2 numbers', () => {
 ```
 
 The assertion function and Jest method basically replace the "if statement".
+
+---
+
+# Scaling Applications with APIs and How to Secure Them
+
+One of the best ways to quickly scale your application is to integrate APIs (application programming interface). They can do things such as:
+- Adding weather data
+- Enabling two-factor authentication for your users
+- Add real-time hotel listings
+- Use a device's built-in camera
+- and much more...
+
+Most third-party APIs have the ability to let you make them more dynamic.
+- You can inject your own variables into the URL
+- Can have they're own functions, objects, or properties you can call
+
+For example, if you're adding weather data in a Node.js project with the WeatherStack API: 
+```javascript
+const url = 'http://api.weatherstack.com/current?access_key=[YOUR_ACCESS_KEY]&query=newyork&units=f'
+```
+
+>Let's breakdown `http://api.weatherstack.com/`
+>- `current` refers to the time-frame you wish to pull the data
+>- `?access_key=` is verification to prove that you're the one calling the API from WeatherStack
+>>- This is important because usually APIs charge you for a certain amount of uses 
+>>- Don't share this key or you will be charged a ton of money if someone uses the API with your access key
+>>- Typically a randomly generated string
+>- `&query=` sets the location
+>- `&units=` sets the weather temp. to Fahrenheit or Celsius
+
+If you're sharing your code on an open repository like GitHub, you will need to secure your *access key*. The best way to do that is to make your key an environment variable listed in an `.env` file.
+```env
+WEATHERSTACK_API_KEY=[YOUR_ACCESS_KEY]
+```
+It's a best practice to add `.env` files to a folder labeled `config` and add that folder to your `.gitignore` file. In order to call the environment variable, you would use the syntax `process.env.{variable name}`.
+
+To see the how this API works in code using your own variables, WeatherStack's dynamic properties, and calling a secure access key from an `.env` file:
+```javascript
+const request = require ('request');
+const apiKey = process.env.WEATHERSTACK_API_KEY;
+// latitude and longitude of Baton Rouge
+const lat = 30.471165;
+const long = -91.147385;
+const forecast = (lat, long, apiKey) => {
+    const url = 'http://api.weatherstack.com/current?access_key=' + apiKey + '&query=' + lat + ',' + long + '&units=f';
+	request({url, json:true} => {
+	    const {temperature, feelslike, humidity, uv_index} = current;
+		const t = temperature;
+		const fl = feelslike;
+		const h = humidity;
+		const uv = uv_index;
+		console.log('It is currently ' + t + ' degrees out. It feels like ' + fl + ' degrees. The humidity is ' + h + '% and the UV index is ' + uv + '.')
+	})
+};
+```
+The end result will print the sentence from `console.log` with the up-to-date temperature, feels-like temp., humidity, and UV index from WeatherStack's API. With some random example data, it would look like:
+```
+It is currently 90 degrees out. It feels like 95 degrees. The humidity is 30% and the UV index is 4.8.
+```
+
+**Summary of the example code**
+- The variables `apiKey`, `lat`, and `long` were all injected into the URL to make the API secure and dynamic
+- Destructured `current` to get specific properties 
+	- Side note: it's typically not a good idea to abbreviate variables in larger projects, I just did it for this example to make the sentence in `console.log` a little more readable
+- Injected the pre-defined, dynamic properties of `current` into the sentence that we want printed to the console
 
 ---
 
