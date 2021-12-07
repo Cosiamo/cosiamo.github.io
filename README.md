@@ -125,7 +125,7 @@ One of the best ways to quickly scale your application is to integrate APIs (app
 
 Most third-party APIs have the ability to let you make them more dynamic.
 - You can inject your own variables into the URL
-- Can have they're own functions, objects, or properties you can call
+- Can have their own functions, objects, or properties you can call
 
 For example, if you're adding weather data in a Node.js project with the WeatherStack API: 
 ```javascript
