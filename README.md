@@ -1,5 +1,5 @@
 # Apprentice Database Submissions from Joshua Becnel
-This site was created by Joshua Becnel to submit the necessary requirements in order to complete the Apprentice Database (Application Development Specialist - Work Processes & Competencies). To view specific submissions, click the corresponding links in the Table of Contents.
+This site was created by Joshua Becnel to submit the necessary requirements in order to complete the Apprentice Database (Application Development Specialist - Work Processes & Competencies). I have already submitted some of the dependencies before I started working on this site, that's why some will be missing from the Table of Contents. To view specific submissions, click the corresponding links in the Table of Contents.
 
 > # Table of Contents
 >> ## Work Processes
