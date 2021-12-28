@@ -22,10 +22,10 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >> ## Competencies 
 >>> ### DevOps
 >>> - [Understand and demonstrate DevOps automation](#devops-automation-and-feature-flags)
->>> - Understand and demonstrate DevOps metrics and measurements
->>> - Understand and demonstrate continuous delivery
->>> - Understand and demonstrate continuous integration
->>> - Understand and demonstrate feature decoupling
+>>> - [Understand and demonstrate DevOps metrics and measurements](#metrics-and-measurements)
+>>> - [Understand and demonstrate continuous delivery](#continuous-delivery)
+>>> - [Understand and demonstrate continuous integration](#continuous-integration)
+>>> - [Understand and demonstrate feature decoupling](#feature-decoupling)
 >>> 
 >>> ### Platforms, Services, and Solutions
 >>> - Understand and demonstrate knowledge of cloud computing fundamentals, including the various tools, services and principles
@@ -203,6 +203,137 @@ Segments are group of users that have attributes tied to them.
 - etc..
 
 Segmenting your users based on specific parameters allows you to Dark Launch new features in your application. A Dark Launch is when a feature is in production but not visible to any or some users.
+
+---
+
+# Metrics and Measurements
+**DevOps Metrics** are data points that track the progress of a software development pipeline. The fast feedback from these data points helps identify and address any bottlenecks in the development life-cycle.
+
+>Four main DevOps metrics
+>- Lead time for changes
+>	- The amount of time it takes for work to be completed
+>- change failure rate
+>	- The ratio of working and broken features
+>- Deployment frequency
+>	- The amount of builds that makes it to your user base
+>- Mean time to recovery (MTTR)
+>	- The duration of time an outage is detected to when it is repaired
+
+>The best way to measure these data points are with these simple equations:
+>- Lead time for changes
+>	- `Time deployed to production - the start time`
+>- change failure rate
+>	- `(Failed deployments/total deployments * 100)`
+>- Deployment frequency
+>	- `(Successful deployments/total deployments * 100)`
+>- Mean time to recovery (MTTR)
+>	- `Resolved timestamp - start timestamp`
+
+---
+
+# Continuous Delivery
+
+New versions of software being released used to be a bottleneck for the teams working on applications. Manual testing as well as operation and development teams working in silos resulted in unreliable releases, overlooked errors, and delays. Automating version releases allows teams to *fail fast*. In other words, tests that are most likely to fail are ran first and tests that take longer to run only happen after the faster ones are completed. This is where **Continuous Delivery** comes in.
+
+Continuous Delivery is a discipline where a program, application, or any other software can be released to production at any time. 
+- Programmers, IT infrastructure team, UI/UX designers, and the operation teams should communicate and work together
+	- Everyone has access to the code
+	- Everyone can see everything
+- Automate releases and tests
+- Have a proper and universal understanding of what needs to be done
+- Need to have the infrastructure for [continuous integration](#continuous-integration) in place
+
+The four key principles of Continuous Delivery are:
+- Continuous Exploration
+- Continuous Deployment
+- Release on Demand
+- [Continuous Integration](#continuous-integration)
+
+---
+
+# Continuous Integration
+
+Continuous Integration is a development practice that asks developers to integrate code into a shared repository everyday.
+- All contributors make a commit to the main branch everyday
+- Automate the process of building and testing 
+- Have a single, central place to commit code
+	- An example of this would be a **monorepo** (monolithic repository)
+
+A monorepo is a large, single repository that holds many different projects that are all version controlled. These projects are can be independent of each other and ran by different teams. Many large companies such as Google, Microsoft, and Twitter have monorepos. It is thought that Google has the largest code repository ever with over 80TBs of data. These are great for continuous integration because they offer:
+- Greater visibility
+- Easier dependency management
+- A unified build process
+- Consistency
+- And much more...
+
+Continuous integration is fast and takes less effort from the developers. Issues will be more apparent which makes them faster to catch and fix. The automation process means there are less issues that you have to deal with. Because everyone is contributing to the repository everyday, that means:
+- Better communication between contributors 
+- Shorter time between integration iterations
+- The code base is ready to be delivered much faster
+
+---
+
+# Feature Decoupling
+
+
+It is important to decouple the functionality of your features for many reasons. For new features, so that Class.X doesn't break whenever you're adding Class.Y. If you tightly couple the functionality of an existing class (Class.X) with a new class (Class.Y), the chances of Class.X being affected when Class.Y is changed are high. It's a good idea to decouple existing features as well. 
+- it's easier to add and improve functionality
+- better for the overall security of your application
+
+One benefit that Feature Flags offers is the ability to segment your user base. This allows you to decouple specific features between certain users, administrators, and developers. By doing this you're not only doing feature decoupling for functionality and security, but by making the program more dynamic from user-to-user as well.
+
+Examples:
+- allow users that sign up for beta testing to try out new features before they're toggled on for the rest of the user base
+- show a "local specialties" menu for a restaurant chain, that has multiple locations, to users that share the zip code to a specific restaurant location
+- allow access to view certain information based on admin privileges
+
+Let's say you were creating a website with React JS for a restaurant. They want the menu page to only display the dishes to their regular customers. However, for their loyal customers they not only want to display the dish, but also the recipe for it. 
+You would set it up to look something like: 
+
+A file housing customer info
+```javascript
+const customerType = {
+	isLoyalCustomer: true
+};
+```
+
+A file housing recipe info
+```javascript
+const recipeFrenchOnionSoup = "The recipe is..."
+```
+
+A file for the Higher Order component
+```javascript
+const requireAuthentication = (WrappedComponent) => {
+	return (props) => (
+		<div>
+			{props.isLoyalCustomer ? (<WrappedComponent {...props} />) : (<WrappedComponent />)};
+		</div>
+	);
+};
+```
+
+And a file for the menu
+```javascript
+const Menu = (props) => (
+	<div>
+		<h1>Menu</h1>
+	
+		<p>French Onion soup</p>
+		<p>{props.recipe}</p>
+	</div>
+);
+
+const CustomerStatus = requireAuthentication(Menu);
+ReactDOM.render(<CustomerStatus customerType recipe={recipeFrenchOnionSoup} /> document.getElementById('app'));
+```
+
+The advantages to this scenario:
+- The functionality of checking if the user is a loyal customer isn't tightly integrated in `Menu`
+	- The ternary operator `{props.isLoyalCustomer ? (<WrappedComponent {...props} />) : (<WrappedComponent />)}` makes it so that the `Menu` will still render even if you're changing how `isLoyalCustomer` works 
+- `customerType` makes the experience of the site more dynamic from user-to-user
+- The functionality, customer info, and the recipe info are their own variables which makes it easier to [scale the application](#continuous-delivery)
+- Everything is separated into their own files so that the object is unaware of the logic behind the toggling decision
 
 ---
 
