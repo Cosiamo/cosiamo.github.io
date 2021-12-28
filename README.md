@@ -21,7 +21,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 
 >> ## Competencies 
 >>> ### DevOps
->>> - [Understand and demonstrate DevOps automation](#devops-automation-feature-flags)
+>>> - [Understand and demonstrate DevOps automation](#devops-automation-and-feature-flags)
 >>> - Understand and demonstrate DevOps metrics and measurements
 >>> - Understand and demonstrate continuous delivery
 >>> - Understand and demonstrate continuous integration
@@ -182,7 +182,7 @@ It is currently 90 degrees out. It feels like 95 degrees. The humidity is 30% an
 
 ---
 
-# DevOps Automation & Feature Flags
+# DevOps Automation and Feature Flags
 DevOps Automation is the implementation of technology that performs tasks and operations with limited human intervention. The main objectives are to accelerate development, scale applications quickly, as well as build [continuous integration](#continuous-integration) and [continuous delivery](#continuous-delivery) workflows.
 
 One way to automate your workflow is to implement feature flags. **Feature Flags**, aka Feature Toggles or Switches, is a method used to deliver and integrate code without re-deploying the application. It allows you to turn features on or off whenever you need to based on parameters you set. You can set these up manually by adding properties in `.json` files or config maps. However, it's much easier to to use a feature flag service, such as Split or Flagsmith. Services, such as these, offer:
