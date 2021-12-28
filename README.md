@@ -21,7 +21,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 
 >> ## Competencies 
 >>> ### DevOps
->>> - Understand and demonstrate DevOps automation
+>>> - [Understand and demonstrate DevOps automation](#devops-automation-&-feature-flags)
 >>> - Understand and demonstrate DevOps metrics and measurements
 >>> - Understand and demonstrate continuous delivery
 >>> - Understand and demonstrate continuous integration
@@ -179,6 +179,30 @@ It is currently 90 degrees out. It feels like 95 degrees. The humidity is 30% an
 - Destructured `current` to get specific properties 
 	- Side note: it's typically not a good idea to abbreviate variables in larger projects, I just did it for this example to make the sentence in `console.log` a little more readable
 - Injected the pre-defined, dynamic properties of `current` into the sentence that we want printed to the console
+
+---
+
+# DevOps Automation & Feature Flags
+DevOps Automation is the implementation of technology that performs tasks and operations with limited human intervention. The main objectives are to accelerate development, scale applications quickly, as well as build [continuous integration](#continuous-integration) and [continuous delivery](#continuous-delivery) workflows.
+
+One way to automate your workflow is to implement feature flags. **Feature Flags**, aka Feature Toggles or Switches, is a method used to deliver and integrate code without re-deploying the application. It allows you to turn features on or off whenever you need to based on parameters you set. You can set these up manually by adding properties in `.json` files or config maps. However, it's much easier to to use a feature flag service, such as Split or Flagsmith. Services, such as these, offer:
+- a central place to manage your flags
+- can turn them on or off without modifying features in your apps
+- easier to audit and get usage data than with `.json` files
+
+**Benefits of Feature Flags:**
+- can turn them on or off without deployment
+- can test directly in production
+- segment users based on different attributes
+
+Segments are group of users that have attributes tied to them.
+- current location
+- user zip code
+- admin privileges
+- email ID
+- etc..
+
+Segmenting your users based on specific parameters allows you to Dark Launch new features in your application. A Dark Launch is when a feature is in production but not visible to any or some users.
 
 ---
 
