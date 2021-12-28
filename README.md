@@ -21,7 +21,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 
 >> ## Competencies 
 >>> ### DevOps
->>> - [Understand and demonstrate DevOps automation](#devops-automation-&-feature-flags)
+>>> - [Understand and demonstrate DevOps automation](#devops-automation-feature-flags)
 >>> - Understand and demonstrate DevOps metrics and measurements
 >>> - Understand and demonstrate continuous delivery
 >>> - Understand and demonstrate continuous integration
