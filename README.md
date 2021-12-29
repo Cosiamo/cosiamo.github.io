@@ -54,7 +54,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Understand and demonstrate how to build and test quality code, at scale](#test-and-scale-code-with-enzyme-and-jest)
 >>> - Understand and demonstrate key software design fundamentals 
 >>> - Understand and demonstrate knowledge of web programming skills 
->>> - Understand and demonstrate test-driven development
+>>> - [Understand and demonstrate test-driven development](#test-driven-development)
 >>> - Understand and manage technical debt
 >>> - Understand and navigate the complexity associated with enterprise-level devlopment
 >>> - Understand how to use version control for all elements of the software delivery lifecycle
@@ -433,6 +433,114 @@ Now both of these test cases can make sure that the user is indeed providing the
 - `.simulate('change', { target: {value} });` simulates the changing the the target value with the `value` variable that was defined.
 
 This method makes it much easier to test the functionality of the code as the application grows larger and becomes more complex.
+---
+
+# Test Driven Development
+
+Test Driven Development (TDD) is the practice of writing out test cases first, then writing code to pass those test cases. It is sometimes referred to as the Red-Green-Refactor method (fail-pass-refactor). In other words, it's a technique where you describe the behavior of the code you want to write, as a test case, then implement it into the project.
+
+There are different types of testing. The three main types are:
+- Unit testing
+	- adds value to a code base at the lowest level
+	- validates the behavior of individual functions, methods, or units of code
+- Integration testing
+	- Testing multiple units of code together
+	- Can write unit tests to test each unit of code then write an integration test to see how well they work together
+- End-to-end testing
+	- runs the app in a simulated environment
+	- attempts to emulate actual user behavior
+
+Other types of testing: 
+- Acceptance testing
+	- test client or user's requirements
+- System testing
+	- ensures everything works on real hardware
+- Sanity/Smoke testing
+	- runs the important tests first, then everything else
+- Functional Testing
+	- tests actual code
+- non-functional Testing
+	- Performance
+	- usability 
+	- security
+- stress-testing/fail-over testing
+	- used to test the capabilities of the infrastructure as opposed to the code itself
+
+If we were creating an accounting application and we wanted to have a function that calculated the total amount of each dollar amount the user inputs, we would need to first write out what we want the function to accomplish. It would need to return 0 if there aren't any expenses, return a single amount if the user only inputs a single expense, and add all expenses if the user inputs multiple.
+
+*(All of this example code is written with JavaScript and being tested using Jest)*
+
+- First we need fixture data for the test cases
+```javascript
+export default [{
+	id: '1',
+	description: 'Gum',
+	note: '',
+	amount: 195,
+}, {
+	id: '2',
+	description: 'Rent',
+	note: '',
+	amount: 109500,
+}, {
+	id: '3',
+	description: 'Credit Card',
+	note: '',
+	amount: 4500,
+}];
+```
+
+- Once we have the fixture set, we write a test case that expects 0 
+```javascript
+test('Should return 0 if no expenses', () => {
+	const result = selectExpensesTotal([]);
+	expect(result).toBe(0);
+});
+```
+
+- There isn't anything to test yet so it will fail
+- Since we have only have a test that expects 0 we only need to write the function to return 0 for now
+```javascript
+export default (expenses) => {
+	if (expenses.length === 0){
+	return 0;
+	} else {
+
+	}
+};
+```
+
+- Now that there is a function that returns 0 the test will pass
+- We can now test for the user inputting an amount with the fixture data
+```javascript
+test('Should correctly add up a single expense', () => {
+	const result = selectExpensesTotal([expenses[1]]);
+	expect(result).toBe(109500);
+});
+test('Should correctly add up multiple expenses', () => {
+	const result = selectExpensesTotal(expenses);
+	expect(result).toBe(114195);
+});
+```
+
+- Again, we should expect the tests to fail because the function isn't set up yet
+- Because of the fixture data that was set up for these tests we can expect the expense with the index of 1 to be 109500 and all of the expenses being added together to be 114195
+- Now we just need to complete the function
+```javascript
+export default (expenses) => {
+	if (expenses.length === 0){
+	return 0;
+	} else {
+		return expenses
+			.map((expense) => expense.amount)
+			.reduce((sum, value) => {
+				return sum + value;
+			}, 0);
+	}
+};
+```
+
+- The test will pass because the function adds the expenses together 
 
 ---
 
