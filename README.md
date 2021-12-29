@@ -12,9 +12,9 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Perform system scaling and security](#scaling-applications-with-apis-and-how-to-secure-them)
 >>> 
 >>> ### DevOps
->>> - Perform continuous integration of code
->>> - Perform continuous delivery of code
->>> - Implement metrics and measurement
+>>> - [Perform continuous integration of code](#devops)
+>>> - [Perform continuous delivery of code](#devops)
+>>> - [Implement metrics and measurement](#metrics-and-measurements)
 >>> 
 >>> ### Platforms, Services, and Solutions
 >>> - Use logging and monitoring tools
@@ -179,6 +179,12 @@ It is currently 90 degrees out. It feels like 95 degrees. The humidity is 30% an
 - Destructured `current` to get specific properties 
 	- Side note: it's typically not a good idea to abbreviate variables in larger projects, I just did it for this example to make the sentence in `console.log` a little more readable
 - Injected the pre-defined, dynamic properties of `current` into the sentence that we want printed to the console
+
+---
+
+# DevOps
+
+While completing a course on React JS I performed continuous integration and and continuous delivery. Click the link [here](https://github.com/Cosiamo/expense.manager-learning.purpose.only) to see the work.
 
 ---
 
