@@ -503,7 +503,7 @@ test('Should return 0 if no expenses', () => {
 ```javascript
 export default (expenses) => {
 	if (expenses.length === 0){
-	return 0;
+		return 0;
 	} else {
 
 	}
@@ -529,7 +529,7 @@ test('Should correctly add up multiple expenses', () => {
 ```javascript
 export default (expenses) => {
 	if (expenses.length === 0){
-	return 0;
+		return 0;
 	} else {
 		return expenses
 			.map((expense) => expense.amount)
