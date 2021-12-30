@@ -50,7 +50,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Complete Ways of Working module in Apprenticeship Skills Launchpad](#ways-of-working-module)
 >>> 
 >>> ### Software Engineering Fundamentals
->>> - Demonstrate knowledge of key computer programming fundamentals
+>>> - [Demonstrate knowledge of key computer programming fundamentals](#key-computer-programming-fundamentals)
 >>> - [Understand and demonstrate how to build and test quality code, at scale](#test-and-scale-code-with-enzyme-and-jest)
 >>> - Understand and demonstrate key software design fundamentals 
 >>> - Understand and demonstrate knowledge of web programming skills 
@@ -364,6 +364,90 @@ The advantages to this scenario:
 > One time I showed leadership in the workplace was when I was working for Boost Mobile. The franchise owner moved our store manager to another location without appointing a new manager at our store, so I stepped up to fill the role. I would manage our store’s inventory, set up hours for my coworkers and I, and reported sales results to our franchise owner and Sprint rep. I even trained a new repair technician. Even though our store’s volume was always low, I still was able to keep it afloat and meet monthly goals while I was filling the role without any proper manager training whatsoever.
 > ## Teamwork and Collaboration
 > I actively practice teamwork and collaboration daily with Johnnie Gonzalez, Matthew Crain, and Skyler Pointer. Every day we talk with each other on Slack to see where we are in the apprentice launchpad and apprentice database. We answer each other’s questions and help with problems that any of us have. We set up WebEx meetings every so often so we can collaborate and plan our next steps in order to complete the apprenticeship as soon as possible. The result has been that we’ve completed a large chunk of what we’ve been assigned and gained a plethora of knowledge regarding various coding languages, proper coding syntax, and a better understanding of SAP and all of the intricacies in their partnership with IBM. 
+
+---
+
+# Key Computer Programming Fundamentals
+###### Functions
+- A block of reusable code that was created to perform a task 
+```javascript
+const square = function(x){
+	return x * x;
+};
+```
+###### Objects
+- An abstract data type that can include properties, methods, and other objects
+```javascript
+const car = {
+	brand: "Ford",
+	model: "Mustang",
+	color: "Red"
+};
+```
+###### Methods
+- A subroutine from a class that is predefined in the source code of a program
+- defines the behavior of a class
+###### Arrays
+- An ordered collection of multiple items of the same type stored together indexed by contiguous integers
+```javascript
+const pets = [
+	"Dog",
+	"Cat",
+	"Parrot"
+];
+```
+###### Variables
+- A malleable storage location which contains information (data or code)
+- Typically the name of the variable will reference the information it contains
+```javascript
+let pet1 = "Dog";
+let pet2 = "Cat";
+let pet3 = "Parrot";
+
+const pets = [
+	pet1,
+	pet2,
+	pet3
+];
+```
+###### Loops
+- **For Loops**
+	- Enables a set of conditions to be executed repeatedly until a condition is satisfied
+	- Repeats a unit of code a known number of times
+```javascript
+for (let i = 0; i < example.length; i++) {
+	example[i];
+}
+```
+- **While Loops**
+	- Repeats a a set of instructions based on a condition
+	- Repeats a unit if code an unknown amount of time
+```javascript
+while (i < 10) {
+	"A number that is less than 10 is " + i;
+	i++
+}
+```
+###### Errors
+-  **Logic Error**
+	-  A type of error that is the result of improper logic in code that was written
+	-  Can cause unexpected results
+	-  might not prevent you from running a program, but might crash it later
+-  **Syntax Error**
+	-  Caused by writing incorrect syntax according to the language you're programming in 
+- **Runtime Error**
+	-  An error that occurs while the program is running after being successfully compiled
+	-  Often referred to as bugs
+###### Debugging
+- The process of detecting and removing bugs, aka, errors
+###### Data Structures
+- A way to store and retrieve data so that a computer can use it effectively
+###### Recursion
+- The process of defining a problem or a solution in simpler terms
+- Take one big problem and break it down into smaller problems
+###### Pseudocode
+- A method of creating instructions (algorithms) in a human readable format
+- "fake code"
 
 ---
 
