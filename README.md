@@ -371,6 +371,7 @@ The advantages to this scenario:
 
 #### Functions
 - A block of reusable code that was created to perform a task 
+
 ```javascript
 const square = function(x){
 	return x * x;
@@ -379,6 +380,7 @@ const square = function(x){
 
 #### Objects
 - An abstract data type that can include properties, methods, and other objects
+
 ```javascript
 const car = {
 	brand: "Ford",
@@ -393,6 +395,7 @@ const car = {
 
 #### Arrays
 - An ordered collection of multiple items of the same type stored together indexed by contiguous integers
+
 ```javascript
 const pets = [
 	"Dog",
@@ -404,6 +407,7 @@ const pets = [
 #### Variables
 - A malleable storage location which contains information (data or code)
 - Typically the name of the variable will reference the information it contains
+
 ```javascript
 let pet1 = "Dog";
 let pet2 = "Cat";
@@ -420,6 +424,7 @@ const pets = [
 - **For Loops**
 	- Enables a set of conditions to be executed repeatedly until a condition is satisfied
 	- Repeats a unit of code a known number of times
+
 ```javascript
 for (let i = 0; i < example.length; i++) {
 	example[i];
@@ -428,6 +433,7 @@ for (let i = 0; i < example.length; i++) {
 - **While Loops**
 	- Repeats a a set of instructions based on a condition
 	- Repeats a unit if code an unknown amount of time
+
 ```javascript
 while (i < 10) {
 	"A number that is less than 10 is " + i;
