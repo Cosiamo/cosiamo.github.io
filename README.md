@@ -12,7 +12,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Perform system scaling and security](#scaling-applications-with-apis-and-how-to-secure-them)
 >>> 
 >>> ### DevOps
->>> - [Perform continuous integration of code](#devops)
+>>> - [Perform continuous integration of code](#devops-work-processes)
 >>> - [Perform continuous delivery of code](#devops)
 >>> - [Implement metrics and measurement](#metrics-and-measurements)
 >>> 
@@ -182,7 +182,7 @@ It is currently 90 degrees out. It feels like 95 degrees. The humidity is 30% an
 
 ---
 
-# DevOps
+# DevOps Work Processes
 
 While completing a course on React JS I performed continuous integration and and continuous delivery. Click the link [here](https://github.com/Cosiamo/expense.manager-learning.purpose.only) to see the work.
 
