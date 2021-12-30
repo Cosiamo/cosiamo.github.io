@@ -13,7 +13,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> 
 >>> ### DevOps
 >>> - [Perform continuous integration of code](#devops-work-processes)
->>> - [Perform continuous delivery of code](#devops)
+>>> - [Perform continuous delivery of code](#devops-work-processes)
 >>> - [Implement metrics and measurement](#metrics-and-measurements)
 >>> 
 >>> ### Platforms, Services, and Solutions
