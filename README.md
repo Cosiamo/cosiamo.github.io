@@ -368,6 +368,7 @@ The advantages to this scenario:
 ---
 
 # Key Computer Programming Fundamentals
+
 #### Functions
 - A block of reusable code that was created to perform a task 
 ```javascript
@@ -375,6 +376,7 @@ const square = function(x){
 	return x * x;
 };
 ```
+
 #### Objects
 - An abstract data type that can include properties, methods, and other objects
 ```javascript
@@ -384,9 +386,11 @@ const car = {
 	color: "Red"
 };
 ```
+
 #### Methods
 - A subroutine from a class that is predefined in the source code of a program
 - defines the behavior of a class
+
 #### Arrays
 - An ordered collection of multiple items of the same type stored together indexed by contiguous integers
 ```javascript
@@ -396,6 +400,7 @@ const pets = [
 	"Parrot"
 ];
 ```
+
 #### Variables
 - A malleable storage location which contains information (data or code)
 - Typically the name of the variable will reference the information it contains
@@ -410,6 +415,7 @@ const pets = [
 	pet3
 ];
 ```
+
 #### Loops
 - **For Loops**
 	- Enables a set of conditions to be executed repeatedly until a condition is satisfied
@@ -428,6 +434,7 @@ while (i < 10) {
 	i++
 }
 ```
+
 #### Errors
 -  **Logic Error**
 	-  A type of error that is the result of improper logic in code that was written
@@ -438,13 +445,17 @@ while (i < 10) {
 - **Runtime Error**
 	-  An error that occurs while the program is running after being successfully compiled
 	-  Often referred to as bugs
+
 #### Debugging
 - The process of detecting and removing bugs, aka, errors
+
 #### Data Structures
 - A way to store and retrieve data so that a computer can use it effectively
+
 #### Recursion
 - The process of defining a problem or a solution in simpler terms
 - Take one big problem and break it down into smaller problems
+
 #### Pseudocode
 - A method of creating instructions (algorithms) in a human readable format
 - "fake code"
