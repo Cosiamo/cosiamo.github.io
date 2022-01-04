@@ -540,6 +540,7 @@ Now both of these test cases can make sure that the user is indeed providing the
 - `.simulate('change', { target: {value} });` simulates the changing the the target value with the `value` variable that was defined.
 
 This method makes it much easier to test the functionality of the code as the application grows larger and becomes more complex.
+
 ---
 
 # Test Driven Development
