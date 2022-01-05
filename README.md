@@ -4,7 +4,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 > # Table of Contents
 >> ## Work Processes
 >>> ### Principles and Practices
->>> - [Use and contribute to shared and open GitHub repositories](work-processes)
+>>> - [Use and contribute to shared and open GitHub repositories](#work-process)
 >>> - Gather data and conduct analysis to draw insights
 >>>
 >>> ### Software Engineering Fundamentals
@@ -12,8 +12,8 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Perform system scaling and security](#scaling-applications-with-apis-and-how-to-secure-them)
 >>>
 >>> ### DevOps
->>> - [Perform continuous integration of code](#work-processes)
->>> - [Perform continuous delivery of code](work-processes)
+>>> - [Perform continuous integration of code](#work-process)
+>>> - [Perform continuous delivery of code](#work-process)
 >>> - [Implement metrics and measurement](#metrics-and-measurements)
 >>>
 >>> ### Platforms, Services, and Solutions
@@ -182,7 +182,7 @@ It is currently 90 degrees out. It feels like 95 degrees. The humidity is 30% an
 
 ---
 
-# Work Processes
+# Work Process
 
 While completing a course on React JS I performed continuous integration, continuous delivery, and contributed to an open GitHub repository I created. Click the link [here](https://github.com/Cosiamo/expense.manager-learning.purpose.only) to see the work.
 
