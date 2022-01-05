@@ -4,29 +4,29 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 > # Table of Contents
 >> ## Work Processes
 >>> ### Principles and Practices
->>> - Use and contribute to shared and open GitHub repositories
+>>> - [Use and contribute to shared and open GitHub repositories](work-processes)
 >>> - Gather data and conduct analysis to draw insights
->>> 
+>>>
 >>> ### Software Engineering Fundamentals
->>> - [Perform software testing and problem solving](#software-testing-with-jest) 
+>>> - [Perform software testing and problem solving](#software-testing-with-jest)
 >>> - [Perform system scaling and security](#scaling-applications-with-apis-and-how-to-secure-them)
->>> 
+>>>
 >>> ### DevOps
->>> - [Perform continuous integration of code](#devops-work-processes)
->>> - [Perform continuous delivery of code](#devops-work-processes)
+>>> - [Perform continuous integration of code](#work-processes)
+>>> - [Perform continuous delivery of code](work-processes)
 >>> - [Implement metrics and measurement](#metrics-and-measurements)
->>> 
+>>>
 >>> ### Platforms, Services, and Solutions
 >>> - Use logging and monitoring tools
 
->> ## Competencies 
+>> ## Competencies
 >>> ### DevOps
 >>> - [Understand and demonstrate DevOps automation](#devops-automation-and-feature-flags)
 >>> - [Understand and demonstrate DevOps metrics and measurements](#metrics-and-measurements)
 >>> - [Understand and demonstrate continuous delivery](#continuous-delivery)
 >>> - [Understand and demonstrate continuous integration](#continuous-integration)
 >>> - [Understand and demonstrate feature decoupling](#feature-decoupling)
->>> 
+>>>
 >>> ### Platforms, Services, and Solutions
 >>> - [Understand and demonstrate knowledge of cloud computing fundamentals, including the various tools, services and principles](#cloud-computing-fundamentals)
 >>> - [Understand and demonstrate the design patterns and practices for building cloud native services](#design-patterns-and-practices-for-building-cloud-native-services)
@@ -35,7 +35,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - Understand the relationship between scaling techniques, how to exploit them, and where
 >>> - Understand the topologies of enterprise solutions, and how clients use our portfolio of products and services together
 >>> - Understand the various platforms, their differences, relative strengths / weaknesses, and integrations
->>> 
+>>>
 >>> ### Principles and Practices
 >>> - Demonstrate ability to analyze data sets, identify insights, and leverage to drive decision making
 >>> - Demonstrate key teamwork and collaborative behaviors
@@ -48,12 +48,12 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> ### Professional Skills Development
 >>> - [Complete Ways of Thinking module in Apprenticeship Skills Launchpad](#ways-of-thinking-module)
 >>> - [Complete Ways of Working module in Apprenticeship Skills Launchpad](#ways-of-working-module)
->>> 
+>>>
 >>> ### Software Engineering Fundamentals
 >>> - [Demonstrate knowledge of key computer programming fundamentals](#key-computer-programming-fundamentals)
 >>> - [Understand and demonstrate how to build and test quality code, at scale](#test-and-scale-code-with-enzyme-and-jest)
->>> - Understand and demonstrate key software design fundamentals 
->>> - Understand and demonstrate knowledge of web programming skills 
+>>> - Understand and demonstrate key software design fundamentals
+>>> - Understand and demonstrate knowledge of web programming skills
 >>> - [Understand and demonstrate test-driven development](#test-driven-development)
 >>> - Understand and manage technical debt
 >>> - Understand and navigate the complexity associated with enterprise-level devlopment
@@ -130,7 +130,7 @@ Most third-party APIs have the ability to let you make them more dynamic.
 - You can inject your own variables into the URL
 - Can have their own functions, objects, or properties you can call
 
-For example, if you're adding weather data in a Node.js project with the WeatherStack API: 
+For example, if you're adding weather data in a Node.js project with the WeatherStack API:
 ```javascript
 const url = 'http://api.weatherstack.com/current?access_key=[YOUR_ACCESS_KEY]&query=newyork&units=f'
 ```
@@ -138,7 +138,7 @@ const url = 'http://api.weatherstack.com/current?access_key=[YOUR_ACCESS_KEY]&qu
 >Let's breakdown `http://api.weatherstack.com/`
 >- `current` refers to the time-frame you wish to pull the data
 >- `?access_key=` is verification to prove that you're the one calling the API from WeatherStack
->>- This is important because usually APIs charge you for a certain amount of uses 
+>>- This is important because usually APIs charge you for a certain amount of uses
 >>- Don't share this key or you will be charged a ton of money if someone uses the API with your access key
 >>- Typically a randomly generated string
 >- `&query=` sets the location
@@ -176,15 +176,15 @@ It is currently 90 degrees out. It feels like 95 degrees. The humidity is 30% an
 
 **Summary of the example code**
 - The variables `apiKey`, `lat`, and `long` were all injected into the URL to make the API secure and dynamic
-- Destructured `current` to get specific properties 
+- Destructured `current` to get specific properties
 	- Side note: it's typically not a good idea to abbreviate variables in larger projects, I just did it for this example to make the sentence in `console.log` a little more readable
 - Injected the pre-defined, dynamic properties of `current` into the sentence that we want printed to the console
 
 ---
 
-# DevOps Work Processes
+# Work Processes
 
-While completing a course on React JS I performed continuous integration and and continuous delivery. Click the link [here](https://github.com/Cosiamo/expense.manager-learning.purpose.only) to see the work.
+While completing a course on React JS I performed continuous integration, continuous delivery, and contributed to an open GitHub repository I created. Click the link [here](https://github.com/Cosiamo/expense.manager-learning.purpose.only) to see the work.
 
 ---
 
@@ -241,7 +241,7 @@ Segmenting your users based on specific parameters allows you to Dark Launch new
 
 New versions of software being released used to be a bottleneck for the teams working on applications. Manual testing as well as operation and development teams working in silos resulted in unreliable releases, overlooked errors, and delays. Automating version releases allows teams to *fail fast*. In other words, tests that are most likely to fail are ran first and tests that take longer to run only happen after the faster ones are completed. This is where **Continuous Delivery** comes in.
 
-Continuous Delivery is a discipline where a program, application, or any other software can be released to production at any time. 
+Continuous Delivery is a discipline where a program, application, or any other software can be released to production at any time.
 - Programmers, IT infrastructure team, UI/UX designers, and the operation teams should communicate and work together
 	- Everyone has access to the code
 	- Everyone can see everything
@@ -261,7 +261,7 @@ The four key principles of Continuous Delivery are:
 
 Continuous Integration is a development practice that asks developers to integrate code into a shared repository everyday.
 - All contributors make a commit to the main branch everyday
-- Automate the process of building and testing 
+- Automate the process of building and testing
 - Have a single, central place to commit code
 	- An example of this would be a **monorepo** (monolithic repository)
 
@@ -273,7 +273,7 @@ A monorepo is a large, single repository that holds many different projects that
 - And much more...
 
 Continuous integration is fast and takes less effort from the developers. Issues will be more apparent which makes them faster to catch and fix. The automation process means there are less issues that you have to deal with. Because everyone is contributing to the repository everyday, that means:
-- Better communication between contributors 
+- Better communication between contributors
 - Shorter time between integration iterations
 - The code base is ready to be delivered much faster
 
@@ -282,7 +282,7 @@ Continuous integration is fast and takes less effort from the developers. Issues
 # Feature Decoupling
 
 
-It is important to decouple the functionality of your features for many reasons. For new features, so that Class.X doesn't break whenever you're adding Class.Y. If you tightly couple the functionality of an existing class (Class.X) with a new class (Class.Y), the chances of Class.X being affected when Class.Y is changed are high. It's a good idea to decouple existing features as well. 
+It is important to decouple the functionality of your features for many reasons. For new features, so that Class.X doesn't break whenever you're adding Class.Y. If you tightly couple the functionality of an existing class (Class.X) with a new class (Class.Y), the chances of Class.X being affected when Class.Y is changed are high. It's a good idea to decouple existing features as well.
 - it's easier to add and improve functionality
 - better for the overall security of your application
 
@@ -293,8 +293,8 @@ Examples:
 - show a "local specialties" menu for a restaurant chain, that has multiple locations, to users that share the zip code to a specific restaurant location
 - allow access to view certain information based on admin privileges
 
-Let's say you were creating a website with React JS for a restaurant. They want the menu page to only display the dishes to their regular customers. However, for their loyal customers they not only want to display the dish, but also the recipe for it. 
-You would set it up to look something like: 
+Let's say you were creating a website with React JS for a restaurant. They want the menu page to only display the dishes to their regular customers. However, for their loyal customers they not only want to display the dish, but also the recipe for it.
+You would set it up to look something like:
 
 A file housing customer info
 ```javascript
@@ -324,7 +324,7 @@ And a file for the menu
 const Menu = (props) => (
 	<div>
 		<h1>Menu</h1>
-	
+
 		<p>French Onion soup</p>
 		<p>{props.recipe}</p>
 	</div>
@@ -336,7 +336,7 @@ ReactDOM.render(<CustomerStatus customerType recipe={recipeFrenchOnionSoup} /> d
 
 The advantages to this scenario:
 - The functionality of checking if the user is a loyal customer isn't tightly integrated in `Menu`
-	- The ternary operator `{props.isLoyalCustomer ? (<WrappedComponent {...props} />) : (<WrappedComponent />)}` makes it so that the `Menu` will still render even if you're changing how `isLoyalCustomer` works 
+	- The ternary operator `{props.isLoyalCustomer ? (<WrappedComponent {...props} />) : (<WrappedComponent />)}` makes it so that the `Menu` will still render even if you're changing how `isLoyalCustomer` works
 - `customerType` makes the experience of the site more dynamic from user-to-user
 - The functionality, customer info, and the recipe info are their own variables which makes it easier to [scale the application](#continuous-delivery)
 - Everything is separated into their own files so that the object is unaware of the logic behind the toggling decision
@@ -360,7 +360,7 @@ There are many tools and options in regards to cloud computing. There are Virtua
 
 - Web service integration
 - For application development, PaaS provides:
-	- Hardware and software tools 
+	- Hardware and software tools
 	- Database management systems
 	- Programming language libraries
 	- Editing, compilation, and testing tools
@@ -371,13 +371,13 @@ There are many tools and options in regards to cloud computing. There are Virtua
 - Software distributed is centrally hosted and licensed
 - Similar to Application Service Provider (ASP)
 - Single copy of the application is created and given to all users
-- Easy API integration 
+- Easy API integration
 
 #### Function as a Service (FaaS)
 
 - Run, build, and secure an application with all of it's functionality and services
 - Event-driven and users are charged based on their usage
-- Tasks can be easily scheduled 
+- Tasks can be easily scheduled
 - Users don't need to worry about the server
 	- Or their inner workings
 
@@ -390,7 +390,7 @@ There are many tools and options in regards to cloud computing. There are Virtua
 
 ### Cloud Computing Deployment
 
-#### Public Cloud 
+#### Public Cloud
 - Information is available for everyone who uses the cloud
 
 #### Private Cloud
@@ -436,7 +436,7 @@ When it comes to designing cloud native applications, there are so many things t
 - Proactive planning
 - Security
 - Reliability
-- Performance Efficiency 
+- Performance Efficiency
 - Cost Optimization
 - Operational Excellence
 - Multi-Cloud Approach
@@ -502,19 +502,19 @@ Microsoft, just like most major cloud vendors, has their own best practices reco
 # Migration of Data from On-Premise to Cloud Solutions and the Implications
 
 #### Deployment
-**On-Prem:** 
-- The entire infrastructure is located on your property 
+**On-Prem:**
+- The entire infrastructure is located on your property
 - Everything is controlled by the IT team on staff
 	- They're responsible maintaining and upgrading everything themselves
 
-**Cloud:** 
+**Cloud:**
 - The infrastructure is on the premises of whichever company you purchased your cloud subscription from
 - you can access all the resources you use and use as much as you want at anytime
 
 #### Cost
 **On-Prem:**
 - Purchase all server hardware
-- Pay the electricity bill 
+- Pay the electricity bill
 - Buy or rent enough land and building space to store it in
 
 **Cloud:**
@@ -540,7 +540,7 @@ Microsoft, just like most major cloud vendors, has their own best practices reco
 	- Government Organizations
 
 **Cloud:**
-- Security threats are much more serious 
+- Security threats are much more serious
 - Many high profile businesses and organizations have had highly publicized security breaches
 - It's the one big drawback to cloud and why many organizations choose to keep private data on their own in-house servers
 
@@ -560,20 +560,20 @@ Microsoft, just like most major cloud vendors, has their own best practices reco
 
 # Ways of Working module
 > ## Adaptability and Flexibility
-> One time I had to adapt and be flexible in the workplace was when I was working at Boost Mobile and I was promoted to lead repair tech of a different store location and I had no idea about it until I clocked in that day. The task at hand was to set up a repair shop in the back of the store that never had one. In order for me to succeeded at this task I needed to start from the ground up and communicate daily with the franchise owner. I had to get a table, new tools from iFixit, and get parts from our supplier. I adapted to the new store quickly and started repairs almost immediately. I also was able to train a few people in the process. 
+> One time I had to adapt and be flexible in the workplace was when I was working at Boost Mobile and I was promoted to lead repair tech of a different store location and I had no idea about it until I clocked in that day. The task at hand was to set up a repair shop in the back of the store that never had one. In order for me to succeeded at this task I needed to start from the ground up and communicate daily with the franchise owner. I had to get a table, new tools from iFixit, and get parts from our supplier. I adapted to the new store quickly and started repairs almost immediately. I also was able to train a few people in the process.
 > ## Being a Trusted Advisor
 > I had to build trust with my coworkers when I got hired at IBM. None of us knew each other before we were all hired here so we had to build trust among each other. The first big situation we had to build trust was during the “Ehub School June 2021” from June 14th-25th. We knew each other for only 3 weeks at that point and this was the first class our group took together. After the classes we would get together on WebEx calls or message each other on Slack to share what we retained from class that day. Along the way we started to know each other better and started to trust one another’s input on the different topics and discussions. The result of this was that we now trust each other’s intuition and that has helped us tremendously throughout this apprenticeship.
 > ## Leadership
 > One time I showed leadership in the workplace was when I was working for Boost Mobile. The franchise owner moved our store manager to another location without appointing a new manager at our store, so I stepped up to fill the role. I would manage our store’s inventory, set up hours for my coworkers and I, and reported sales results to our franchise owner and Sprint rep. I even trained a new repair technician. Even though our store’s volume was always low, I still was able to keep it afloat and meet monthly goals while I was filling the role without any proper manager training whatsoever.
 > ## Teamwork and Collaboration
-> I actively practice teamwork and collaboration daily with Johnnie Gonzalez, Matthew Crain, and Skyler Pointer. Every day we talk with each other on Slack to see where we are in the apprentice launchpad and apprentice database. We answer each other’s questions and help with problems that any of us have. We set up WebEx meetings every so often so we can collaborate and plan our next steps in order to complete the apprenticeship as soon as possible. The result has been that we’ve completed a large chunk of what we’ve been assigned and gained a plethora of knowledge regarding various coding languages, proper coding syntax, and a better understanding of SAP and all of the intricacies in their partnership with IBM. 
+> I actively practice teamwork and collaboration daily with Johnnie Gonzalez, Matthew Crain, and Skyler Pointer. Every day we talk with each other on Slack to see where we are in the apprentice launchpad and apprentice database. We answer each other’s questions and help with problems that any of us have. We set up WebEx meetings every so often so we can collaborate and plan our next steps in order to complete the apprenticeship as soon as possible. The result has been that we’ve completed a large chunk of what we’ve been assigned and gained a plethora of knowledge regarding various coding languages, proper coding syntax, and a better understanding of SAP and all of the intricacies in their partnership with IBM.
 
 ---
 
 # Key Computer Programming Fundamentals
 
 #### Functions
-- A block of reusable code that was created to perform a task 
+- A block of reusable code that was created to perform a task
 
 ```javascript
 const square = function(x){
@@ -650,7 +650,7 @@ while (i < 10) {
 	-  Can cause unexpected results
 	-  might not prevent you from running a program, but might crash it later
 -  **Syntax Error**
-	-  Caused by writing incorrect syntax according to the language you're programming in 
+	-  Caused by writing incorrect syntax according to the language you're programming in
 - **Runtime Error**
 	-  An error that occurs while the program is running after being successfully compiled
 	-  Often referred to as bugs
@@ -675,7 +675,7 @@ while (i < 10) {
 
 One if the problems with scaling an application is that the larger it becomes, more vulnerabilities and bugs can be overlooked. For example, if you're creating accounting software with React JS, the most common testing tool is Jest but it doesn't scale well whenever you need to test multiple components. That's where Enzyme comes in. It was created and still maintained by Airbnb for the purpose of scaling out testing in React applications and to work along side Jest.
 
-So, in that accounting software that was previously mentioned, if you wanted to add functionality so that the user is entering a valid dollar amount you would write something like: 
+So, in that accounting software that was previously mentioned, if you wanted to add functionality so that the user is entering a valid dollar amount you would write something like:
 
 ```javascript
 onAmountChange = (e) => {
@@ -711,7 +711,7 @@ The important part for validating that the user input was a dollar amount (only 
 
 How would you test that the user is indeed entering a valid dollar amount in the input as your application grows in complexity? If you're scaling the application even more, how would you know that any future input was properly working or you didn't accidentally break the `onAmountChange` function?
 
-You would need to have shallow rendering to test the component as well as assertion functions and methods from Jest. Thankfully Enzyme has a function for shallow rendering that is called `shallow`. For shallow you simply call the component as the argument. 
+You would need to have shallow rendering to test the component as well as assertion functions and methods from Jest. Thankfully Enzyme has a function for shallow rendering that is called `shallow`. For shallow you simply call the component as the argument.
 
 ```javascript
 test('Should set amount if valid input', () => {
@@ -733,7 +733,7 @@ test('Should NOT set amount if invalid input', () => {
 });
 ```
 
-Now both of these test cases can make sure that the user is indeed providing the correct value in the input. 
+Now both of these test cases can make sure that the user is indeed providing the correct value in the input.
 
 - The variable `value` is the user input we want to test
 - `shallow` is calling the component that we want to test
@@ -761,7 +761,7 @@ There are different types of testing. The three main types are:
 	- runs the app in a simulated environment
 	- attempts to emulate actual user behavior
 
-Other types of testing: 
+Other types of testing:
 - Acceptance testing
 	- test client or user's requirements
 - System testing
@@ -772,7 +772,7 @@ Other types of testing:
 	- tests actual code
 - non-functional Testing
 	- Performance
-	- usability 
+	- usability
 	- security
 - stress-testing/fail-over testing
 	- used to test the capabilities of the infrastructure as opposed to the code itself
@@ -801,7 +801,7 @@ export default [{
 }];
 ```
 
-- Once we have the fixture set, we write a test case that expects 0 
+- Once we have the fixture set, we write a test case that expects 0
 ```javascript
 test('Should return 0 if no expenses', () => {
 	const result = selectExpensesTotal([]);
@@ -851,7 +851,7 @@ export default (expenses) => {
 };
 ```
 
-- The test will pass because the function adds the expenses together 
+- The test will pass because the function adds the expenses together
 
 ---
 
@@ -903,7 +903,7 @@ const multiplier = {
 console.log(multiplier.multiply());
 ```
 
-This code works the exact same way as the previous example, however, it's much easier to understand what is supposed to do just by simply changing the syntax of the variable names. 
+This code works the exact same way as the previous example, however, it's much easier to understand what is supposed to do just by simply changing the syntax of the variable names.
 - The comment leaves a clear note of what this block of code is meant to do
 - The variable names `mutiplier` and `multiply` imply what they're supposed to do and have two distinct names to avoid confusion
 - `numbers` gives a clear distinction from 'num'
