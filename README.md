@@ -28,10 +28,10 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Understand and demonstrate feature decoupling](#feature-decoupling)
 >>> 
 >>> ### Platforms, Services, and Solutions
->>> - Understand and demonstrate knowledge of cloud computing fundamentals, including the various tools, services and principles
->>> - Understand and demonstrate the design patterns and practices for building cloud native services
+>>> - [Understand and demonstrate knowledge of cloud computing fundamentals, including the various tools, services and principles](#cloud-computing-fundamentals)
+>>> - [Understand and demonstrate the design patterns and practices for building cloud native services](#design-patterns-and-practices-for-building-cloud-native-services)
 >>> - Understand and demonstrate the use of logging and monitoring tools and infrastructure
->>> - Understand the need for mobility and migration of data from on-premise to cloud solutions, and the implications
+>>> - [Understand the need for mobility and migration of data from on-premise to cloud solutions, and the implications](#migration-of-data-from-on-premise-to-cloud-solutions-and-the-implications)
 >>> - Understand the relationship between scaling techniques, how to exploit them, and where
 >>> - Understand the topologies of enterprise solutions, and how clients use our portfolio of products and services together
 >>> - Understand the various platforms, their differences, relative strengths / weaknesses, and integrations
@@ -340,6 +340,209 @@ The advantages to this scenario:
 - `customerType` makes the experience of the site more dynamic from user-to-user
 - The functionality, customer info, and the recipe info are their own variables which makes it easier to [scale the application](#continuous-delivery)
 - Everything is separated into their own files so that the object is unaware of the logic behind the toggling decision
+
+---
+
+# Cloud Computing Fundamentals
+
+There are many tools and options in regards to cloud computing. There are Virtual Private Servers (VPS) which are private servers running on a virtual machine (VM) in the cloud. There's also cloud storage solutions such as Google Drive, iCloud, and OneDrive. Those are just a couple general examples. To get a better understanding of cloud computing, we need to understand the different types of services they provide.
+
+### Cloud Computing Services
+
+#### Infrastructure as a Service (IaaS)
+
+- Infrastructure that is delivered for outsourcing in order to support an organization's operations
+- Includes hardware, software, data centers, servers, and network space
+- Sometimes referred to as Hardware as a Service (HaaS)
+- Implements platform virtualization
+
+#### Platform as a Service (PaaS)
+
+- Web service integration
+- For application development, PaaS provides:
+	- Hardware and software tools 
+	- Database management systems
+	- Programming language libraries
+	- Editing, compilation, and testing tools
+	- Version control management
+
+#### Software as a Service (SaaS)
+
+- Software distributed is centrally hosted and licensed
+- Similar to Application Service Provider (ASP)
+- Single copy of the application is created and given to all users
+- Easy API integration 
+
+#### Function as a Service (FaaS)
+
+- Run, build, and secure an application with all of it's functionality and services
+- Event-driven and users are charged based on their usage
+- Tasks can be easily scheduled 
+- Users don't need to worry about the server
+	- Or their inner workings
+
+#### Network as a Service (NaaS)
+
+- For organizations or individuals that that do not want to use their own network
+- Network infrastructure hosted by a service provider
+- Represents the network as transport connectivity
+- Network Virtualization
+
+### Cloud Computing Deployment
+
+#### Public Cloud 
+- Information is available for everyone who uses the cloud
+
+#### Private Cloud
+- Infrastructure is located inside an organization and is not shared with anyone without permission
+- Hardware and software are built only for the owner
+
+#### Hybrid Cloud
+- Combination of private and public cloud deployments
+- Advantage of public cloud while doing heavy workloads and the information is secure as private cloud is incorporated
+
+#### Community Cloud
+- Deployment model provided for a limited number of individuals and organizations so that the services are enjoyed only within themselves
+
+### Cloud Computing Vendors
+
+The three biggest service providers in the cloud market are:
+- AWS
+- Google Cloud
+- Microsoft Azure
+
+But, they're not the only ones. A few other big names are:
+- Linode
+- Heroku
+- Alibaba Cloud
+- Oracle
+- IBM Cloud
+- Salesforce
+- SAP
+- Digital Ocean
+- VMWare
+- Firebase
+- Kamatera
+- Vultr
+- UpCloud
+- Brightbox
+- Netlify
+
+---
+
+# Design Patterns and Practices for Building Cloud Native Services
+
+When it comes to designing cloud native applications, there are so many things to consider. Different enterprises will have their own opinions about what the best practices are. In general. most follow these basic practices:
+- Proactive planning
+- Security
+- Reliability
+- Performance Efficiency 
+- Cost Optimization
+- Operational Excellence
+- Multi-Cloud Approach
+
+#### AWS Cloud Design Patterns
+AWS has their own basic design patterns that they recommend:
+-   **Snapshot Pattern**(Data Backups)
+	-   Ensures data is safe
+-   **Stamp Pattern**(Server Replication)
+	-   Reduces the time, labor, and expense of setting up a virtual server
+-   **Scale Up Pattern**(Dynamic Server Spec Up/Down)
+	-   Allows the builders to adjust the server specifications for usage
+-   **Scale Out Pattern**(Dynamically Increasing the Number of Servers)
+	-   Match unexpected variations in traffic volume
+-   **On-Demand Disk Pattern**(Dynamically Increasing/Decreasing Disk Capacity)
+	-   Installation of virtual disks provides unlimited capacity while cutting up-front costs
+
+Other types of AWS patterns:
+-   High Availability
+-   Processing Dynamic Content
+-   Processing Static Content
+-   Uploading Data
+-   Relational Database
+-   Batch Processing
+-   Operation and Maintenance
+-   Network
+
+#### Microsoft Best Practices in Cloud Applications
+Microsoft, just like most major cloud vendors, has their own best practices recommendations when building a cloud native application. These include:
+- **API design**
+	- Most modern web applications expose APIs that clients can use to interact with the application
+	- A well-designed web API should support platform independence and service evolution
+- **API implementation**
+	- A carefully designed web API defines the resources, relationships, and navigation schemes that are accessible to client applications
+- **Autoscaling**
+	- The process of dynamically allocating resources to match performance requirements
+- **Background jobs**
+	- Can be executed without requiring user interaction
+	- The application can start the job and then continue to process interactive requests from users
+- **Caching**
+	- Temporarily copying frequently accessed data to fast storage that's located close to the application
+- **Content delivery network (CDN)**
+	- Distributed network of servers that can efficiently deliver web content to users
+- **Data partitioning**
+	- Data is divided into partitions that can be managed and accessed separately
+	- Partitioning can improve scalability, reduce contention, and optimize performance
+- **Data partitioning strategies (by service)**
+	- There's a listed strategy for partitioning: SQL Database, Azure table storage, Blob Storage, Azure storage queues, Service Bus, Cosmos DB, Azure search, Cache for Redis, Service Fabric, and Event Hubs
+- **Message encoding considerations**
+	- An important aspect of messaging is the format used to encode the payload data
+	- A few choices for encoding formats are: JSON, CSV, protobuf, Apache Avro, MessagePack, and CBOR
+- **Monitoring and diagnostics**
+	- Track the way in which users use your system
+	- Trace resource utilization
+	- Monitor the health and performance of your system
+- **Transient fault handling**
+	- The momentary loss of network connectivity to components and services
+	- The temporary unavailability of a service
+	- Timeouts that arise when a service is busy
+
+---
+
+# Migration of Data from On-Premise to Cloud Solutions and the Implications
+
+#### Deployment
+**On-Prem:** 
+- The entire infrastructure is located on your property 
+- Everything is controlled by the IT team on staff
+	- They're responsible maintaining and upgrading everything themselves
+
+**Cloud:** 
+- The infrastructure is on the premises of whichever company you purchased your cloud subscription from
+- you can access all the resources you use and use as much as you want at anytime
+
+#### Cost
+**On-Prem:**
+- Purchase all server hardware
+- Pay the electricity bill 
+- Buy or rent enough land and building space to store it in
+
+**Cloud:**
+- Only pay for resources you use
+- No maintenance and upkeep cost
+- Price is determined by how much is used
+
+#### Control
+**On-Prem:**
+- You retain and control all of your data
+- Better for highly sensitive data
+
+**Cloud:**
+- Data resides on a third-party server
+- Risk of downtime out of your control
+- Third-party can hold some of your encryption keys
+
+#### Security
+**On-Prem:**
+- Organizations with sensitive information should use an on-premise server
+	- Hospitals
+	- Banks
+	- Government Organizations
+
+**Cloud:**
+- Security threats are much more serious 
+- Many high profile businesses and organizations have had highly publicized security breaches
+- It's the one big drawback to cloud and why many organizations choose to keep private data on their own in-house servers
 
 ---
 
