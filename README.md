@@ -5,7 +5,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >> ## Work Processes
 >>> ### Principles and Practices
 >>> - [Use and contribute to shared and open GitHub repositories](#work-process)
->>> - Gather data and conduct analysis to draw insights
+>>> - [Gather data and conduct analysis to draw insights](#gather-data-and-conduct-analysis-to-draw-insights)
 >>>
 >>> ### Software Engineering Fundamentals
 >>> - [Perform software testing and problem solving](#software-testing-with-jest)
@@ -37,7 +37,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - Understand the various platforms, their differences, relative strengths / weaknesses, and integrations
 >>>
 >>> ### Principles and Practices
->>> - Demonstrate ability to analyze data sets, identify insights, and leverage to drive decision making
+>>> - [Demonstrate ability to analyze data sets, identify insights, and leverage to drive decision making](#gather-data-and-conduct-analysis-to-draw-insights)
 >>> - Demonstrate key teamwork and collaborative behaviors
 >>> - Demonstrate strong communication skills
 >>> - Understand and demonstrate social coding behaviors
@@ -59,6 +59,129 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - Understand and navigate the complexity associated with enterprise-level devlopment
 >>> - Understand how to use version control for all elements of the software delivery lifecycle
 >>> - [Understand, articulate, and demonstrate clean coding behaviors](#understand-articulate-and-demonstrate-clean-coding-behaviors)
+
+---
+
+# Gather Data and Conduct Analysis to Draw Insights
+Data Analytics is the process of analyzing raw data and converting it into useful information to find trends or answer questions. It's a broad term that encompasses a vast amount of techniques and many different goals.
+How do we analyze data?
+- Collect the data
+	- From surveys, polls, internet data, etc.
+	- Can be collected as a continuous stream or as a series of separate events
+- Process the data
+	- Parse the data
+	- Check for empty fields or errors
+- Visualize the data
+	- Structure it in a way that is easily readable
+	- Popular enterprise tools are SAP, Oracle, or Apache Spark
+- Make a decision about your findings
+	- Typically done by data scientists or data analysts
+	- Recently the industry has turned to AI to make decisions
+
+An example of collecting data would be using something such as a web scrapper. It automates the collection of HTML data from websites. Let's say you wanted to gather data about severe weather trends and analyze it. [Weather.com](https://weather.com/) has articles and videos about important weather events listed on their homepage.
+- First we would have to write code to gather the data (Node.js)
+	- Click [here](https://github.com/Cosiamo/top-weather-stories) to see the full code on GitHub
+
+```javascript
+const PORT = 8000
+const axios = require('axios')
+const cheerio = require('cheerio')
+const express = require('express')
+
+const app = express()
+
+const url = 'https://weather.com/'
+
+axios(url)
+	.then(response => {
+		const html = response.data
+		const content = cheerio.load(html)
+		const articles = []
+
+		content('.ContentMedia--listItem--xVM3X', html).each(function() {
+			const title = content(this).text()
+			const url = content(this).attr('href')
+			articles.push({
+				title,
+				url
+			})
+		})
+		console.log(articles)
+	}).catch(err => console.log(err))
+
+app.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`))
+```
+
+- Once the code is executed it will dump all the info into the terminal
+
+```
+Server is running on PORT 8000
+[
+  {
+    title: 'VideoHuman Chain Saves Tourist Caught in Rough Surf',
+    url: '/news/weather/video/human-chain-saves-tourist-caught-in-rough-surf'
+  },
+  {
+    title: 'VideoFish Fall From Sky in TX Storm',
+    url: '/news/weather/video/texas-storms-bring-free-falling-fish'
+  },
+  {
+    title: 'VideoAnalysis: 40% of Americans Live in County Struck by Climate Disaster',
+    url: '/news/climate/video/analysis-40-of-americans-live-in-county-struck-by-climate-disaster'
+  },
+  {
+    title: 'VideoBig Chill Across County',
+    url: '/storms/winter/video/big-chill-across-county-but-relief-on-the-way'
+  }
+]
+```
+
+- We now have data, however the format is terrible
+	- The URL is just a directory path
+	- All titles have "Video" in front of them
+- We need to reformat the code so that it will display the data we want
+	- Parse the data
+
+```javascript
+// From
+content('.ContentMedia--listItem--xVM3X', html).each(function() {
+			const title = content(this).text()
+			const url = content(this).attr('href')
+
+// To
+content('.ContentMedia--listItem--xVM3X', html).each(function() {
+			const title = content(this).text().replace(/(Video)/, "")
+			const url = 'https://weather.com' + content(this).attr('href')
+
+```
+
+- Now that the code has cleaned up some of the formatting, it is much easier to analyze
+
+```
+Server is running on PORT 8000
+[
+  {
+    title: 'Human Chain Saves Tourist Caught in Rough Surf',
+    url: 'https://weather.com/news/weather/video/human-chain-saves-tourist-caught-in-rough-surf'
+  },
+  {
+    title: 'Fish Fall From Sky in TX Storm',
+    url: 'https://weather.com/news/weather/video/texas-storms-bring-free-falling-fish'
+  },
+  {
+    title: 'Analysis: 40% of Americans Live in County Struck by Climate Disaster',
+    url: 'https://weather.com/news/climate/video/analysis-40-of-americans-live-in-county-struck-by-climate-disaster'
+  },
+  {
+    title: 'Big Chill Across County',
+    url: 'https://weather.com/storms/winter/video/big-chill-across-county-but-relief-on-the-way'
+  }
+]
+```
+
+There are plenty of options when choosing how to visualize this data. You could send it to a MongoDB server, an Excel spreadsheet, or just a simple .csv file. Those are only a few simple examples of what you can do to visualize the data. All you need to do is, instead of calling `articles` as the argument in `console,log()`, extract the `articles` array to any visualization tool of your choice. Once it's visualized, data scientists and/or analysts can make a decisions based upon the findings.
+
+In this example there's only four pieces of information. In a real world case there would be thousands, if not millions of data points. If we wanted to we could then parse information from each URL, but that would make this example much longer than it needs to be.
 
 ---
 
