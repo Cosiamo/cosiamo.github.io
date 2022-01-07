@@ -17,7 +17,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Implement metrics and measurement](#metrics-and-measurements)
 >>>
 >>> ### Platforms, Services, and Solutions
->>> - Use logging and monitoring tools
+>>> - [Use logging and monitoring tools](#logging-and-monitoring)
 
 >> ## Competencies
 >>> ### DevOps
@@ -30,7 +30,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> ### Platforms, Services, and Solutions
 >>> - [Understand and demonstrate knowledge of cloud computing fundamentals, including the various tools, services and principles](#cloud-computing-fundamentals)
 >>> - [Understand and demonstrate the design patterns and practices for building cloud native services](#design-patterns-and-practices-for-building-cloud-native-services)
->>> - Understand and demonstrate the use of logging and monitoring tools and infrastructure
+>>> - [Understand and demonstrate the use of logging and monitoring tools and infrastructure](#logging-and-monitoring)
 >>> - [Understand the need for mobility and migration of data from on-premise to cloud solutions, and the implications](#migration-of-data-from-on-premise-to-cloud-solutions-and-the-implications)
 >>> - Understand the relationship between scaling techniques, how to exploit them, and where
 >>> - Understand the topologies of enterprise solutions, and how clients use our portfolio of products and services together
@@ -619,6 +619,154 @@ Microsoft, just like most major cloud vendors, has their own best practices reco
 	- The momentary loss of network connectivity to components and services
 	- The temporary unavailability of a service
 	- Timeouts that arise when a service is busy
+
+---
+
+# Logging and Monitoring
+Logging the activity of your application is vital in understanding how your users interact with the application as well as monitoring the status of the application itself. There are a few best practices to remember in order to have a good log.
+
+#### Four dimensions of a good log
+- Context
+- Purpose
+	- Debugging
+	- UX
+- Importance
+	- Is it urgent? Did the users credit card info get leaked?
+	- Is it normal activity? Did a user log in?
+- Format
+	- Scannable
+	- Parsable
+
+Understanding and properly recognizing what type of log activity is going on will help you determine the appropriate response. That's why properly formatting the log as well as showing ample context is extremely important.
+
+**Bad Format**
+```
+user 32 logged in at 1522775572388
+user 68 logged in at 1522775580450
+fatal error: [object Object]
+got some data [ [object Object], [object Object],
+[object Object], [object Object], [object Object],
+[object Object], [object Object], [object Object],
+...]
+```
+
+- Object , object, object takes hundreds of lines of logs
+	- You lose the context
+- Can't expect anyone reading to know UNIX Epoch off the top of their heads
+
+**Good Format**
+```
+[Tue, 03 Apr 2018 17:16:10 GMT] user [32] logged in
+[Tue, 03 Apr 2018 17:16:12 GMT] user [68] logged in
+[Tue, 03 Apr 2018 17:16:16 GMT] Failed to load user data: [
+	[MYSQL DB] Too Many Connections
+	... Stack Trace
+]
+[Tue, 03 Apr 2018 17:16:18 GMT] Server recieved [46] timestamps from [82.536.22.367]
+```
+
+- Readable error message
+- Wrapping things in square brackets makes things really parsable
+- Having human readable timestamps is much more useful
+
+**Bad Context**
+
+```
+a user logged in
+a user logged in
+a user logged in
+a user logged in
+a user logged in
+error
+got data
+```
+
+- Doesn't tell you if they're unique users or the same one
+- No context for the error is
+- Doesn't tell you what the data is
+
+**Good Context**
+
+```
+[Tue, 03 Apr 2018 17:16:10 GMT] user [28] logged in
+[Tue, 03 Apr 2018 17:16:10 GMT] user [28] logged in
+[Tue, 03 Apr 2018 17:16:10 GMT] user [28] logged in
+[Tue, 03 Apr 2018 17:16:10 GMT] user [28] logged in
+[Tue, 03 Apr 2018 17:16:10 GMT] user [28] logged in
+[Tue, 03 Apr 2018 17:16:16 GMT] Failed to load user data: [
+	[MYSQL DB] Too Many Connections
+	... Stack Trace
+]
+[Tue, 03 Apr 2018 17:16:18 GMT] Server recieved [5] timestamps from [82.536.22.367]
+```
+
+- Shows the same user logged in five times at the exact same time
+- Either a bug in the code or the user is a bot
+- The error shows that there are too many connections
+- The data that was received shows that a specific IP address was pinging the application five times
+
+#### Logging Golden Rules
+There's more to creating a good log than writing out the log itself. You also have to make sure the information inside the log follows best practices as well. An easy way to figure this out is to follow the three **Logging Golden Rules**:
+- Remember the reader
+- No Personal Data
+- Answer the Question!
+
+#### The Logging Type Table
+To expand more on the **Logging Golden Rules** it helps to understand **The Logging Type Table**.
+
+| Name | Goal | Question | Content | Audience |
+| :----: | :----: | :----: | :----: | :----: |
+|*Tracing* |Debugging |How'd we get here? |State changes |Devs |
+|*Event* |Analytics |What's happening? |Actions & Exceptions |Admins / Product Owners / Devs |
+|*Progress* |UX |RUOK? |Percentages / Errors |Users |
+|*Audit* |Verification |RU lying? |Summaries, Double-entry book keeping |Compliance, Gov, Business |
+
+
+
+*Trace logging*
+- Often used for debugging
+- Logging functions or individual variables
+- When there's some bug that you're looking at
+- Useful for developers
+
+*Event logging*
+- Analytics
+- Understanding of what's going on inside the app
+- Is it the user or application doing specific things?
+- Know which bits of specific code to improve
+- Useful for administrators, product owners, and developers
+
+*Progress logging*
+- Useful feedback to users of applications
+- Can show the percentage of progress during installation
+- All about answering the question "Are you ok?"
+	- "Are you still working?"
+	- "Have you crashed?"
+	- "Are there any errors?"
+-  Lets the user know what's going on
+
+*Audit logging*
+- Verifying that the behavior of the application is correct
+- How many users are using the tool?
+- Is the number of subscribers going down every month?
+- It's essentially Double-entry Book Keeping
+	- What accountants do
+	- Look at the data from different angles
+- This information is very useful for the compliance team, government regulators, and businesses
+
+#### Common Tools
+- Log4j
+- Syslog standard
+- Count.ly
+- Logstash
+- console.*
+	- log
+	- error
+	- warn
+	- info
+	- timing
+	- profiler
+
 
 ---
 
