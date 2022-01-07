@@ -697,13 +697,13 @@ got data
 	[MYSQL DB] Too Many Connections
 	... Stack Trace
 ]
-[Tue, 03 Apr 2018 17:16:18 GMT] Server recieved [5] timestamps from [82.536.22.367]
+[Tue, 03 Apr 2018 17:16:18 GMT] Server recieved [46] timestamps from [82.536.22.367]
 ```
 
-- Shows the same user logged in five times at the exact same time
+- Shows the same user logged in multiple times at the exact same time
 - Either a bug in the code or the user is a bot
 - The error shows that there are too many connections
-- The data that was received shows that a specific IP address was pinging the application five times
+- The data that was received shows that a specific IP address was pinging the application 46 times
 
 #### Logging Golden Rules
 There's more to creating a good log than writing out the log itself. You also have to make sure the information inside the log follows best practices as well. An easy way to figure this out is to follow the three **Logging Golden Rules**:
