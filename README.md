@@ -53,10 +53,10 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Demonstrate knowledge of key computer programming fundamentals](#key-computer-programming-fundamentals)
 >>> - [Understand and demonstrate how to build and test quality code, at scale](#test-and-scale-code-with-enzyme-and-jest)
 >>> - [Understand and demonstrate key software design fundamentals](#key-software-design-fundamentals)
->>> - Understand and demonstrate knowledge of web programming skills
+>>> - [Understand and demonstrate knowledge of web programming skills](#web-programming-skills)
 >>> - [Understand and demonstrate test-driven development](#test-driven-development)
 >>> - Understand and manage technical debt
->>> - Understand and navigate the complexity associated with enterprise-level devlopment
+>>> - Understand and navigate the complexity associated with enterprise-level development
 >>> - Understand how to use version control for all elements of the software delivery lifecycle
 >>> - [Understand, articulate, and demonstrate clean coding behaviors](#understand-articulate-and-demonstrate-clean-coding-behaviors)
 
@@ -1150,6 +1150,22 @@ const AppRouter = () => (
 -   Handle all invalid inputs and outputs
 -   Handle anything that could go wrong from the user using your code
 -   Design it in a way that so that no matter who uses it, it will not break
+
+---
+
+# Web Programming Skills
+I've acquired the following certificates:
+- CCA HTML Level 1
+- CCA CSS Level 1
+- CCA JavaScript Level 1
+- CCA JQuery Level 1
+- [JavaScript Basics for beginners](https://www.udemy.com/certificate/UC-cb18ba63-4c8a-4ffd-af86-5c50b8bef6e0/)
+- [The Complete Node.js Developer Course (3rd Edition)](https://www.udemy.com/certificate/UC-b922a00a-beed-4d16-ac60-824e90c93eca/)
+
+**Web apps I made that are currently deployed:**
+[Chat App](https://becnel-nodev3-chat-app.herokuapp.com/)
+[Weather app](https://becnel-weather-app.herokuapp.com/)
+[Expensifiy app](https://react-course-learn-syntax-1.herokuapp.com/)
 
 ---
 
