@@ -52,7 +52,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> ### Software Engineering Fundamentals
 >>> - [Demonstrate knowledge of key computer programming fundamentals](#key-computer-programming-fundamentals)
 >>> - [Understand and demonstrate how to build and test quality code, at scale](#test-and-scale-code-with-enzyme-and-jest)
->>> - Understand and demonstrate key software design fundamentals
+>>> - [Understand and demonstrate key software design fundamentals](#key-software-design-fundamentals)
 >>> - Understand and demonstrate knowledge of web programming skills
 >>> - [Understand and demonstrate test-driven development](#test-driven-development)
 >>> - Understand and manage technical debt
