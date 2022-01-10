@@ -1163,9 +1163,9 @@ I've acquired the following certificates:
 - [The Complete Node.js Developer Course (3rd Edition)](https://www.udemy.com/certificate/UC-b922a00a-beed-4d16-ac60-824e90c93eca/)
 
 **Web apps I made that are currently deployed:**
-[Chat App](https://becnel-nodev3-chat-app.herokuapp.com/)
-[Weather app](https://becnel-weather-app.herokuapp.com/)
-[Expensifiy app](https://react-course-learn-syntax-1.herokuapp.com/)
+- [Chat App](https://becnel-nodev3-chat-app.herokuapp.com/)
+- [Weather app](https://becnel-weather-app.herokuapp.com/)
+- [Expensifiy app](https://react-course-learn-syntax-1.herokuapp.com/)
 
 ---
 
