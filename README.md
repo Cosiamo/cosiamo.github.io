@@ -152,7 +152,13 @@ content('.ContentMedia--listItem--xVM3X', html).each(function() {
 content('.ContentMedia--listItem--xVM3X', html).each(function() {
 			const title = content(this).text().replace(/(Video)/, "")
 			const url = 'https://weather.com' + content(this).attr('href')
-
+			articles.push({
+				title,
+				url
+			})
+		})
+		console.log(articles)
+	}).catch(err => console.log(err))
 ```
 
 - Now that the code has cleaned up some of the formatting, it is much easier to analyze
@@ -1014,6 +1020,136 @@ Now both of these test cases can make sure that the user is indeed providing the
 - `.simulate('change', { target: {value} });` simulates the changing the the target value with the `value` variable that was defined.
 
 This method makes it much easier to test the functionality of the code as the application grows larger and becomes more complex.
+
+---
+
+# Key Software Design Fundamentals
+
+There's many things to take into consideration when designing software. It's not a good idea to bodge things together, it's better to plan out how to tackle the challenges ahead.
+- Focus on Structure
+- Anticipate expensive choices
+- Make sure core decisions strive for high quality
+
+Using design principles will help you come up with a plan to structure your design.
+
+#### Divide & Conquer
+-   Take one large problem and break it down into as many sub-problems as possible
+-   As you solve the smaller problems it will help you solve the larger problem
+-   Let's say you're working on a large scale system
+	-   That large system might have sub-systems
+		-   figure out all of the sub-systems of the system as a whole
+	-   Those sub-systems might have different packages
+		-   figure out what all of the packages of the sub-system are
+	-   Those packages might have different classes
+		-   figure out what all of the classes of the packages are
+	-   Classes have different methods
+		-   figure out what all the methods of the class are
+	-   Methods might use some external dependencies or functions  
+
+#### Cohesion
+-   Everything grouped together makes sense
+-   Designing in a way that everything relates to each other so that nothing doesn't fit in
+-   Designing packages, modules, and classes so that everything is cohesive
+-   Everything is grouped together that should be together
+-   An example of this are math packages in a language like Python, JavaScript, or Java
+    -   considered very cohesive because everything related to math operations is in that package and nothing unnecessary
+        -   sqrt
+        -   pow
+        -   log
+        -   add
+        -   etc...
+
+#### Avoid Coupling
+-   I go over this in the [Feature Decoupling](#feature-decoupling) section
+
+#### Abstraction
+-   Something that is more generalized
+-   Example:
+
+**Concrete**
+```javascript
+const Honda = () => {
+   this.honda = "Honda";
+}
+Honda.prototype.display = () => {
+   return "Vehicle is: " + this.honda;
+}
+```
+
+**Abstract**
+```javascript
+function Vehicle = () => {
+   this.vehicleName = "Honda";
+}
+Vehicle.prototype.display = () => {
+   return "Vehicle is: " + this.vehicleName;
+}
+```
+
+#### Reusability
+-   Make code reusable
+-   An example of this would be a header for a website
+	-   Instead of typing out a header for each page, create a header component and call it at the top of every page
+	-   Example in React:
+
+Header Component
+```javascript
+const Header = () => (
+	<header>
+		<h1>Used-Car Auction</h1>
+		<NavLink to="/" activeClassName="is-active" exact={true}>Dashboard </NavLink>
+		<NavLink to="/create" activeClassName="is-active"> List Car</NavLink>
+	</header>
+);
+```
+
+Router Component
+```javascript
+const AppRouter = () => (
+	<BrowserRouter>
+		<div>
+			<Header />
+			<Switch>
+				<Route path="/" ... />
+				...
+			</Switch>
+		</div>
+	</BrowserRouter>
+);
+```
+
+#### Flexibility
+-   Anticipate that your system is going to change in the future
+-   The application may be simple now but in the future it may get much more complex
+-   A month or a year after you create a project you may need to scale up and if you need to add packages or modules you will need to plan for that ahead of time so you don't have to change the entire code base
+
+#### Anticipate Obsolescence
+-   Avoid early release and versions of software
+-   Use software from reputable companies
+-   Use as few external dependencies as possible
+-   Avoid poorly documented or maintained projects
+-   Be careful of which dependencies you're using as they may become obsolete in the future
+    -   Deprecation
+    -   No longer work for your specific version of programming language
+    -   May not be maintained or supported for some OSes
+    -   May not have updates
+    -   May have bugs that aren't going to be fixed
+
+#### Portability
+-   Anticipate that the design or the system you're creating right now may be used om a different platform or device than you're currently targeting
+-   If you're making a web app, you may also want to make it a IOS or Android app
+-   If you don't factor in portability, it may result in changing the application or creating an entirely new application to port it over
+
+#### Testability
+-   I go over this in the [Test Driven-Development](#test-driven-development) section.
+
+#### Design Defensively
+
+-   Idiot-proof your code
+-   Have good error messages
+-   Handle all invalid inputs and outputs
+-   Handle anything that could go wrong from the user using your code
+-   Design it in a way that so that no matter who uses it, it will not break
 
 ---
 
