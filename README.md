@@ -41,7 +41,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Demonstrate key teamwork and collaborative behaviors](#teamwork-and-collaboration)
 >>> - Demonstrate strong communication skills
 >>> - Understand and demonstrate social coding behaviors
->>> - Understand and model good feedback behaviors
+>>> - [Understand and model good feedback behaviors](#giving-and-receiving-feedback)
 >>> - Understand, articulate, and demonstrate agile principles and practices
 >>> - Understand, articulate, and demonstrate IBM Design Thinking
 >>>
@@ -844,6 +844,9 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 > One time I showed leadership in the workplace was when I was working for Boost Mobile. The franchise owner moved our store manager to another location without appointing a new manager at our store, so I stepped up to fill the role. I would manage our store’s inventory, set up hours for my coworkers and I, and reported sales results to our franchise owner and Sprint rep. I even trained a new repair technician. Even though our store’s volume was always low, I still was able to keep it afloat and meet monthly goals while I was filling the role without any proper manager training whatsoever.
 > ## Teamwork and Collaboration
 > I actively practice teamwork and collaboration daily with Johnnie Gonzalez, Matthew Crain, and Skyler Pointer. Every day we talk with each other on Slack to see where we are in the apprentice launchpad and apprentice database. We answer each other’s questions and help with problems that any of us have. We set up WebEx meetings every so often so we can collaborate and plan our next steps in order to complete the apprenticeship as soon as possible. The result has been that we’ve completed a large chunk of what we’ve been assigned and gained a plethora of knowledge regarding various coding languages, proper coding syntax, and a better understanding of SAP and all of the intricacies in their partnership with IBM.
+>## Giving and Receiving Feedback
+When giving feedback it's best to share in a respectful way that will help the person you're communicating with understand your thoughts so they can take the necessary steps to improve their performance. Make sure to focus within the context of the specific goal you set out to achieve. You want to help them improve, not bring them down with unnecessary criticism. Timing is key as well. There's no need to bring up your thoughts on an unrelated topic that doesn't have any relevance to the one at hand.
+>When receiving feedback make sure to ask for feedback on all of your work as much as you can. In order to better yourself and the work you do, you need to understand your shortcomings on a particular topic. Instead of being defensive and interrupting them in the middle of their thought, it's better to hear them out completely and to take in what they're saying. Not everyone is perfect and some of their points you may disagree with. Don't get angry and try to explain your point immediately, instead ask them questions about how they came to that conclusion. They may bring up a good point you haven't thought of yet, or if they're incorrect, it's easier to explain your point of view on a specific part of their feedback instead of their entire statement as a whole.
 
 ---
 
