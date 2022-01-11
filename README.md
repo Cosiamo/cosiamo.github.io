@@ -38,7 +38,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>>
 >>> ### Principles and Practices
 >>> - [Demonstrate ability to analyze data sets, identify insights, and leverage to drive decision making](#gather-data-and-conduct-analysis-to-draw-insights)
->>> - Demonstrate key teamwork and collaborative behaviors
+>>> - [Demonstrate key teamwork and collaborative behaviors](#teamwork-and-collaboration)
 >>> - Demonstrate strong communication skills
 >>> - Understand and demonstrate social coding behaviors
 >>> - Understand and model good feedback behaviors
@@ -438,7 +438,7 @@ const recipeFrenchOnionSoup = "The recipe is..."
 ```
 
 A file for the Higher Order component
-```html
+```javascript
 const requireAuthentication = (WrappedComponent) => {
 	return (props) => (
 		<div>
@@ -1072,7 +1072,7 @@ const Honda = () => {
    this.honda = "Honda";
 }
 Honda.prototype.display = () => {
-   "Vehicle is: " + this.honda;
+   return "Vehicle is: " + this.honda;
 }
 ```
 
@@ -1082,7 +1082,7 @@ const Vehicle = () => {
    this.vehicleName = "Honda";
 }
 Vehicle.prototype.display = () => {
-   "Vehicle is: " + this.vehicleName;
+   return "Vehicle is: " + this.vehicleName;
 }
 ```
 
