@@ -438,7 +438,7 @@ const recipeFrenchOnionSoup = "The recipe is..."
 ```
 
 A file for the Higher Order component
-```javascript
+```html
 const requireAuthentication = (WrappedComponent) => {
 	return (props) => (
 		<div>
@@ -449,7 +449,7 @@ const requireAuthentication = (WrappedComponent) => {
 ```
 
 And a file for the menu
-```javascript
+```html
 const Menu = (props) => (
 	<div>
 		<h1>Menu</h1>
@@ -1072,17 +1072,17 @@ const Honda = () => {
    this.honda = "Honda";
 }
 Honda.prototype.display = () => {
-   return "Vehicle is: " + this.honda;
+   "Vehicle is: " + this.honda;
 }
 ```
 
 **Abstract**
 ```javascript
-function Vehicle = () => {
+const Vehicle = () => {
    this.vehicleName = "Honda";
 }
 Vehicle.prototype.display = () => {
-   return "Vehicle is: " + this.vehicleName;
+   "Vehicle is: " + this.vehicleName;
 }
 ```
 
@@ -1093,7 +1093,7 @@ Vehicle.prototype.display = () => {
 	-   Example in React:
 
 Header Component
-```javascript
+```html
 const Header = () => (
 	<header>
 		<h1>Used-Car Auction</h1>
@@ -1104,7 +1104,7 @@ const Header = () => (
 ```
 
 Router Component
-```javascript
+```html
 const AppRouter = () => (
 	<BrowserRouter>
 		<div>
