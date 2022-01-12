@@ -40,7 +40,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Demonstrate ability to analyze data sets, identify insights, and leverage to drive decision making](#gather-data-and-conduct-analysis-to-draw-insights)
 >>> - [Demonstrate key teamwork and collaborative behaviors](#teamwork-and-collaboration)
 >>> - [Demonstrate strong communication skills](#communication)
->>> - Understand and demonstrate social coding behaviors
+>>> - [Understand and demonstrate social coding behaviors](#social-coding-behaviors)
 >>> - [Understand and model good feedback behaviors](#giving-and-receiving-feedback)
 >>> - Understand, articulate, and demonstrate agile principles and practices
 >>> - Understand, articulate, and demonstrate IBM Design Thinking
@@ -820,6 +820,79 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 - Security threats are much more serious
 - Many high profile businesses and organizations have had highly publicized security breaches
 - It's the one big drawback to cloud and why many organizations choose to keep private data on their own in-house servers
+
+---
+
+# Social Coding Behaviors
+I started working on a web scrapper that grabs the top four stories from weather.com and turns the titles and links into objects that are placed inside of an array. I made a  simple `console.log()` call to log the array to the terminal. I wanted to get some help for the front-end so I asked Johnnie Gonzalez on Slack if he could help me with it. We ended up calling each other on Webex, and before he started on the front-end, he gave me some very helpful feedback on the back-end code I wrote.
+- Originally I had 2 `url` variables
+	- One that contained the website
+	- The other inside of the callback function (outside of the global scope)
+- I typed out `weather.com` twice instead of using the variable at both locations that I needed it at
+	- I couldn't call the original `url` variable because it was being overwritten by the new one inside of the callback function
+- Whenever he informed me that I should have one variable for the url, it made me realize that I also statically typed the class name as an argument inside of the `content` function
+- He informed me that I needed comments in order for him to have a better understanding of how it works
+
+**Before**
+```javascript
+const url = 'https://weather.com'
+
+axios(url)
+	.then(response => {
+	const html = response.data
+	const content = cheerio.load(html)
+	const articles = []
+
+	content('.ContentMedia--listItem--xVM3X', html).each(function() {
+		const title = content(this).text().replace(/(Video)/, "")
+		const url = 'https://weather.com' + content(this).attr('href')
+		articles.push({
+			title,
+			url
+		})
+	})
+	console.log(articles)
+}).catch(err => console.log(err))
+```
+
+- Changed the `url` variable inside of the `content` function to `link`
+- was able to call original `url` variable inside `link`
+- Moved the class name from the argument in the `content` function to it's own variable
+- Added comments
+- Also added a README file
+
+**After**
+```javascript
+// Website you want gather info from
+const url = 'https://weather.com'
+// The Class or ID name of the element you're targeting
+const htmlElement = '.ContentMedia--listItem--xVM3X'
+
+// Axios calls the http address from the url variable
+axios(url)
+	.then(response => {
+	// html variable records the data from the http response
+	const html = response.data
+	// Cheerio picks out the HTML elements from the html variable
+	const content = cheerio.load(html)
+	const articles = []
+
+	// function after '.each' is a callback function
+	content(htmlElement, html).each(function() {
+		const title = content(this).text().replace(/(Video)/, "")
+		const link = url + content(this).attr('href')
+		// fills the empty articles array
+		articles.push({
+			title,
+			link
+		})
+	})
+	// calls the array and prints to the terminal
+	console.log(articles)
+}).catch(err => console.log(err))
+```
+
+Because we were coding together we taught each other a few things. I thought him about some useful Node.js modules as well as the basic concepts of building a web scrapper. He taught me how to structure my back-end code in a way that is helpful for front-end developers.
 
 ---
 
