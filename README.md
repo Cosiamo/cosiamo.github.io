@@ -415,7 +415,7 @@ It is important to decouple the functionality of your features for many reasons.
 - it's easier to add and improve functionality
 - better for the overall security of your application
 
-One benefit that Feature Flags offers is the ability to segment your user base. This allows you to decouple specific features between certain users, administrators, and developers. By doing this you're not only doing feature decoupling for functionality and security, but by making the program more dynamic from user-to-user as well.
+One benefit that feature decoupling offers is the ability to segment your user base. This allows you to decouple specific features between certain users, administrators, and developers. By doing this you're not only doing feature decoupling for functionality and security, but by making the program more dynamic from user-to-user as well.
 
 Examples:
 - allow users that sign up for beta testing to try out new features before they're toggled on for the rest of the user base
