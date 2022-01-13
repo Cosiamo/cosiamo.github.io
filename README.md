@@ -988,6 +988,8 @@ The code I wrote originally only logged the titles and links to the articles in 
 >It's very important to have cultural intelligence, not just at work, but in life in general. Understanding that everyone comes from different backgrounds and cultures will help with gaining more friends, finding great business partners, and being more understanding of someone's feelings about particular subjects. Being culturally aware is important because something that might mean nothing to you, could insult someone else. It's imperative to understand other cultures. You can learn more by researching the culture or just by listening to what someone from that culture has to say.
 >## Emotional Intelligence
 >Having emotional intelligence at work is key to having a better working relationship with your coworkers and clients. When I was working in mobile phone sales I had to practice emotional intelligence everyday. Whether a customer was upset about an unexpected charge on their phone bill, angry about a their phone being broken, or worried about losing their photos during an upgrade. I had to read the room in order to respond appropriately to the situation.
+>## Working Social
+>Most people have worked in a social environment at some point in their lives. Ever since I started working I've worked socially. Even though I work remotely now I still work in a social setting, although virtually. The team I'm on still communicates daily on Slack and when we need help or just to check where everyone is at we get on a Webex call. I find it very helpful because if I'm ever stuck or have a question, it's great having a coworker that understands what needs to be done and helps you out. 
 
 ---
 
