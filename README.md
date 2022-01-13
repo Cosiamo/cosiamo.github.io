@@ -825,6 +825,9 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 
 # Social Coding Behaviors
 I started working on a web scrapper that grabs the top four stories from weather.com and turns the titles and links into objects that are placed inside of an array. I made a  simple `console.log()` call to log the array to the terminal. I wanted to get some help for the front-end so I asked Johnnie Gonzalez on Slack if he could help me with it. We ended up calling each other on Webex, and before he started on the front-end, he gave me some very helpful feedback on the back-end code I wrote.
+
+To view the entire repository click [here](https://github.com/Cosiamo/top-weather-stories).
+
 - Originally I had 2 `url` variables
 	- One that contained the website
 	- The other inside of the callback function (outside of the global scope)
@@ -893,6 +896,65 @@ axios(url)
 ```
 
 Because we were coding together we taught each other a few things. I thought him about some useful Node.js modules as well as the basic concepts of building a web scrapper. He taught me how to structure my back-end code in a way that is helpful for front-end developers.
+
+After the call, Johnnie pulled the repository from my GitHub and added the front-end. He also changed the back-end some to fit what he was working on.
+
+**His back-end additions**
+```javascript
+const fetchNestedVideoSrc = async (link, number) => {
+	const browser = await pup.launch();
+
+	const page = await browser.newPage();
+	await page.goto(link);
+
+	// takes a screen shot of the current page and saves it to make sure we are viewing the correct page we want to scrape
+	// await page.screenshot({ path: `story${number}.png` });
+	const pageData = await page.evaluate(() => {
+		return {
+			html: document.documentElement.innerHTML,
+	};
+});
+
+	const cl = ".jw-video jw-reset ";
+
+	const $ = cheerio.load(pageData.html);
+	console.log("PAGE!!!", $(cl, pageData.html).find("src"));
+
+	// closes the browser to use the next link that's retrieved
+	await browser.close();
+};
+```
+
+```javascript
+app.get("/express_backend", (request, response) => {
+	// sending the articles to the frontend using an app get method
+	response.send(JSON.stringify(articles)); //turning the data into a string
+});
+```
+
+**The directories and files he added for the front-end**
+
+> client
+>-  public
+>    - favicon.ico
+>    - index.html
+>    - logo192.png
+>    - logo512.png
+>    - manifest.json
+>    - robots.txt
+>- src
+>    - components
+>        - TopWeatherStories.jsx
+>    - App.css
+>    - App.js
+>    - App.test.js
+>    - index.css
+>    - index.js
+>    - logo.svg
+>    - reportWebVitals.js
+>    - setUpTests.js
+
+The code I wrote originally only logged the titles and links to the articles in the terminal, but thanks to Johnnie, those are now on a web page.
 
 ---
 
