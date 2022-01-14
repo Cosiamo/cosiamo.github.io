@@ -34,7 +34,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Understand the need for mobility and migration of data from on-premise to cloud solutions, and the implications](#migration-of-data-from-on-premise-to-cloud-solutions-and-the-implications)
 >>> - Understand the relationship between scaling techniques, how to exploit them, and where
 >>> - Understand the topologies of enterprise solutions, and how clients use our portfolio of products and services together
->>> - [Understand the various platforms, their differences, relative strengths / weaknesses, and integrations](#the-various-platforms-their-differences-relative-strengths/weaknesses-and-integrations)
+>>> - [Understand the various platforms, their differences, relative strengths / weaknesses, and integrations](#the-various-platforms-their-differences-relative-strengths-weaknesses-and-integrations)
 >>>
 >>> ### Principles and Practices
 >>> - [Demonstrate ability to analyze data sets, identify insights, and leverage to drive decision making](#gather-data-and-conduct-analysis-to-draw-insights)
