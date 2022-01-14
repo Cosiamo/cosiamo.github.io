@@ -4,7 +4,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 > # Table of Contents
 >> ## Work Processes
 >>> ### Principles and Practices
->>> - [Use and contribute to shared and open GitHub repositories](#work-process)
+>>> - [Use and contribute to shared and open GitHub repositories](#social-coding-behaviors-and-shared-github-repository)
 >>> - [Gather data and conduct analysis to draw insights](#gather-data-and-conduct-analysis-to-draw-insights)
 >>>
 >>> ### Software Engineering Fundamentals
@@ -40,7 +40,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Demonstrate ability to analyze data sets, identify insights, and leverage to drive decision making](#gather-data-and-conduct-analysis-to-draw-insights)
 >>> - [Demonstrate key teamwork and collaborative behaviors](#teamwork-and-collaboration)
 >>> - [Demonstrate strong communication skills](#communication)
->>> - [Understand and demonstrate social coding behaviors](#social-coding-behaviors)
+>>> - [Understand and demonstrate social coding behaviors](#social-coding-behaviors-and-shared-github-repository)
 >>> - [Understand and model good feedback behaviors](#giving-and-receiving-feedback)
 >>> - Understand, articulate, and demonstrate agile principles and practices
 >>> - Understand, articulate, and demonstrate IBM Design Thinking
@@ -823,7 +823,7 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 
 ---
 
-# Social Coding Behaviors
+# Social Coding Behaviors and Shared GitHub Repository
 I started working on a web scrapper that grabs the top four stories from weather.com and turns the titles and links into objects that are placed inside of an array. I made a  simple `console.log()` call to log the array to the terminal. I wanted to get some help for the front-end so I asked Johnnie Gonzalez on Slack if he could help me with it. We ended up calling each other on Webex, and before he started on the front-end, he gave me some very helpful feedback on the back-end code I wrote.
 
 To view the entire repository click [here](https://github.com/Cosiamo/top-weather-stories).
