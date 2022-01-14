@@ -34,7 +34,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Understand the need for mobility and migration of data from on-premise to cloud solutions, and the implications](#migration-of-data-from-on-premise-to-cloud-solutions-and-the-implications)
 >>> - Understand the relationship between scaling techniques, how to exploit them, and where
 >>> - Understand the topologies of enterprise solutions, and how clients use our portfolio of products and services together
->>> - Understand the various platforms, their differences, relative strengths / weaknesses, and integrations
+>>> - [Understand the various platforms, their differences, relative strengths / weaknesses, and integrations](#the-various-platforms-their-differences-relative-strengths/weaknesses-and-integrations)
 >>>
 >>> ### Principles and Practices
 >>> - [Demonstrate ability to analyze data sets, identify insights, and leverage to drive decision making](#gather-data-and-conduct-analysis-to-draw-insights)
@@ -820,6 +820,79 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 - Security threats are much more serious
 - Many high profile businesses and organizations have had highly publicized security breaches
 - It's the one big drawback to cloud and why many organizations choose to keep private data on their own in-house servers
+
+---
+
+# The Various Platforms, Their Differences, Relative Strengths / Weaknesses, and Integrations
+
+The big three in the cloud computing business are:
+- **Amazon Web Services**
+- **Microsoft Azure**
+- **Google Cloud**
+
+The first of the three is AWS, which was released in July 2002. Later Google released Google Cloud in April 2008, then Microsoft followed shortly after, releasing Azure in October 2008. AWS is the largest and has the advantage of pioneering the industry. Azure is great for customers who regularly use Microsoft tools as it allows easy integration. Google Cloud has the best pricing model as well as easy integration for Google products and tools. That's just a basic overview, the big differences are much more in depth. The website [javatpoint](https://www.javatpoint.com/) has a great table showing all of the key differences between these services.
+
+Parameter | AWS | Azure | Google Cloud
+:----:    |:---:|:---:  |:----:
+  **App Testing**| device farm | DevTest labs |Cloud Test labs
+ **API Management** | Amazon API gateway | Azure API gateway |Cloud endpoints
+ **Kubernetes Management** | EKS | Kubernetes service |Kubernetes engine
+  **Git Repositories**| AWS source repositories | Azure source repositories |Cloud source repositories
+ **Data warehouse** | Redshift | SQL warehouse | Big Query
+  **Object Storage**| S3 | Block Blobs and files |Google cloud storage
+  **Relational DB**| RDS | Relational DBs |Google Cloud SQL
+  **Block Storage**| EBS | Page Blobs |Persistent disks
+  **Marketplace**| AWS | Azure |G suite
+  **File Storage**| EFS | Azure Files |ZFS and Avere
+  **Media Services**| Amazon Elastic transcoder | Azure media services |Cloud video intelligence API
+ **Virtual network** | VPC | VNet |Subnet
+  **Pricing**| Per hour | Per minute |Per minute
+  **Maximum processors in VM**| 128 | 128 |96
+  **Maximum memory in VM (GiB)**| 3904 | 3800 |1433
+  **Catching**| ElasticCache | RedisCache |CloudCDN
+  **Load Balancing Configuration**| Elastic Load Balancing | Load Balancer Application Gateway |Cloud Load Balancing
+  **Global Content Delivery Networks**| CloudFront| Content Delivery Network|Cloud Interconnect
+
+
+### Amazon Web Services (AWS)
+
+**Pros**
+- Massive community of developers
+- An extensive amount of offerings
+- Support for large enterprises
+- Large amounts of documentation
+- Lots of training available
+- Servers across the world
+
+**Cons**
+- Can be difficult to use
+- An overwhelming amount of options
+- There have been complaints in regards to pricing
+
+### Microsoft Azure
+
+**Pros**
+- Easy Microsoft tools and software integration
+- Great hybrid cloud support
+- Broad feature set
+- Free and Open Source support
+
+**Cons**
+- Problems with the documentation
+- Management tools are lackluster
+
+### Google Cloud
+
+**Pros**
+- Made with cloud-native businesses in mind
+- Great discounts happen regularly
+- Flexible pricing
+- Support for portability
+- Free and Open Source support
+
+**Cons**
+- Fewer features
+- Not as many services as the other two
 
 ---
 
