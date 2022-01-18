@@ -32,7 +32,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Understand and demonstrate the design patterns and practices for building cloud native services](#design-patterns-and-practices-for-building-cloud-native-services)
 >>> - [Understand and demonstrate the use of logging and monitoring tools and infrastructure](#logging-and-monitoring)
 >>> - [Understand the need for mobility and migration of data from on-premise to cloud solutions, and the implications](#migration-of-data-from-on-premise-to-cloud-solutions-and-the-implications)
->>> - Understand the relationship between scaling techniques, how to exploit them, and where
+>>> - [Understand the relationship between scaling techniques, how to exploit them, and where](#relationship-between-scaling-techniques)
 >>> - Understand the topologies of enterprise solutions, and how clients use our portfolio of products and services together
 >>> - [Understand the various platforms, their differences, relative strengths / weaknesses, and integrations](#the-various-cloud-platforms)
 >>>
@@ -820,6 +820,72 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 - Security threats are much more serious
 - Many high profile businesses and organizations have had highly publicized security breaches
 - It's the one big drawback to cloud and why many organizations choose to keep private data on their own in-house servers
+
+---
+
+# Relationship Between Scaling Techniques
+
+### AutoScaling
+- A feature that allows organizations to scale their cloud services automatically
+- Allows organizations to scale up or down based upon external traffic or internal utilization
+- No need for manual intervention during spikes in traffic
+
+**Advantages**
+- Lower cost
+- Reliable security
+- Consistent availability
+
+**Types of autoscaling**
+-   Predictive
+    - Anticipates known changes in traffic
+    - Executes reactions at specific times
+-   Scheduled
+    - Works best when there are known traffic increases or decreases
+    - Keeps autoscaling groups on notice in case of spike in traffic
+-   Horizontal
+    - Adding more servers to the auto scaling group in order to scale
+-   Vertical
+    - Scaling by adding more power rather than more servers
+    - Additional RAM, CPU, or storage
+
+### Fail Fast
+- Process of starting a project, gathering feedback, then determining if you should continue the current work, take an alternative approach, or abandon the project
+- This method allows teams to experiment with new ideas more often
+
+**Advantages**
+- Quickly identify bugs
+- Makes the team  working on the project more efficient
+- Reduces the amount of wasted time, energy, and cost
+
+### ReplicaSets
+- ReplicaSets are Kubernetes controllers that are meant to manage a set of replica pods and keep them running at all times
+	- Will add or delete pods based upon what's needed
+- A pod must be labeled with a matching label to the ReplicaSet selector
+	- Pods can be isolated from a ReplicaSet by changing their labels so that they no longer match the ReplicaSet’s selector
+- Can replicate pods and restart or spin up new pods when ones that already exist fail
+
+### Scale up
+- Scaling up is when you purchase more powerful hardware to scale your project
+	- CPU
+	- RAM
+	- Storage
+	- Faster network speeds
+	- etc...
+- The goal is to increase the performance of the hardware that supports your application
+	- A more powerful single server
+- If your using a cloud solution it can be as easy a few button clicks
+- If your using an on-prem solution it could take days or weeks for the hardware to come in, install it, and to have ready for deployment
+- A way to think of scale up:
+	- Buying a *larger* refrigerator when you start to run out of room for food
+
+### Scale out
+- Scaling out is when you use software to scale to more than one server
+	- Each server is considered a node
+- One way to scale out is by creating a new container running a web-server app and adding it to the load balancer pool
+- Projects that support this type of scaling also support the ability to remove resources when the load decreases
+- A way to think of scale out:
+	- Buying *more* refrigerators when you start to run out of room for food
+
 
 ---
 
