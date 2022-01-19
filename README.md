@@ -55,7 +55,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Understand and demonstrate key software design fundamentals](#key-software-design-fundamentals)
 >>> - [Understand and demonstrate knowledge of web programming skills](#web-programming-skills)
 >>> - [Understand and demonstrate test-driven development](#test-driven-development)
->>> - Understand and manage technical debt
+>>> - [Understand and manage technical debt](#technical-debt)
 >>> - Understand and navigate the complexity associated with enterprise-level development
 >>> - Understand how to use version control for all elements of the software delivery lifecycle
 >>> - [Understand, articulate, and demonstrate clean coding behaviors](#understand-articulate-and-demonstrate-clean-coding-behaviors)
@@ -1562,6 +1562,84 @@ export default (expenses) => {
 ```
 
 - The test will pass because the function adds the expenses together
+
+---
+
+# Technical Debt
+Martin Fowler, a software developer whose been in the industry for over three decades, created a simple graph called the **Technical Debt Quadrant** to show how technical debt occurs.
+
+|  | Reckless | Prudent
+| :---: | :---: | :---:
+| **Deliberate** | "We don't have time to design this" | "We need to ship now and worry about the consequences later"
+| **Inadvertent** | "What's layering?" | "Now we know how we should've done it"
+
+According to a research paper titled [“Towards an Ontology of Terms on Technical Debt”](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=312135), which was published by the Software Engineering Institute, there are 13 types of technical debt.
+
+- **Architecture Debt**
+	- Issues in software architecture
+	- Structural Analysis
+		- Analyzing the interdependencies inherent within the code and related systems
+	- Structural Dependencies
+		- Frameworks, libraries, and other third-party dependencies will become outdated if you don't properly maintain them
+	- Violation of Modularity
+		- Two modules that are supposed to be independent may always change together, due to unwanted side effects caused by quick and dirty implementation
+- **Build Debt**
+	- "Dead Flags"
+		- Feature Flags that are not used or deprecated
+	- "Zombie Targets"
+		- A target is marked as “dead” if the attempts to build it have failed for at least 90 days
+	- Dependency
+	- Visibility
+- **Code Debt**
+	- ASA Issues
+	- Code Metrics
+		- Size, complexity, coupling, cohesion, and inheritance
+	- Code outside of standard
+	- Duplicate code
+		- Code that's written twice in the same file or environment
+	- Multithread correctness (ASA)
+		- Typically difficult to design, debug, and prove
+	- Slow algorithm
+- **Defect Debt**
+	- Uncorrected known defects
+- **Design Debt**
+	- Code Metrics
+	- Code Smells
+		- Used to capture symptoms of code decay and potential maintenance problems
+		- Data Class
+		- God class (large class)
+		- Brain Method
+		- Data clumps
+			- Variables that are passed around together throughout various parts of the program
+	- Dispersed Coupling
+		- Methods of a class that depend on many operations across multiple classes
+	- Duplicate Code
+	- Grime
+		- Accumulation of unnecessary or unrelated software artifacts within classes
+	- Intensive Coupling
+		- When classes, methods, and/or functions rely too much on one another
+	- Issues in the software design
+	- Refused Parent Bequest
+- **Documentation Debt**
+	- Documentation does not exist
+	- Incomplete Design Specification
+	- Incomplete Documentation
+	- Insufficient comments in code
+	- Outdated Documentation
+	- Test Documentation
+- **Infrastructure Debt**
+- **People Debt**
+- **Process Debt**
+- **Requirement Debt**
+	- Requirement Backlog List
+		- Prioritized list of work for the development team
+	- Selection/Replacement of webservice
+- **Service Debt**
+- **Test Automation Debt**
+- **Test Debt**
+	- Incomplete Tests
+	- Low coverage
+		- Tests only cover a small amount of code
 
 ---
 
