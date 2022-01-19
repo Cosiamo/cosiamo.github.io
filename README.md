@@ -1676,7 +1676,9 @@ const thing = {
 console.log(thing.thing());
 ```
 
-Even though this code works, both `thing` variables have no real meaning and the name repeats itself which makes it difficult for other people to understand. The array with the variable name `num` is the exact same syntax as the value 'num', which can cause confusion when reading `this.num.map((num) => num`. What does `otherNum` even do?
+- Even though this code works, both `thing` variables have no real meaning and the name repeats itself which makes it difficult for other people to understand
+- The array with the variable name `num` is the exact same syntax as the value 'num', which can cause confusion when reading `this.num.map((num) => num`
+- What does `otherNum` even do?
 
 **Previous example but written clean coding techniques:**
 ```javascript
