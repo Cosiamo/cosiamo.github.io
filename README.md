@@ -56,7 +56,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Understand and demonstrate knowledge of web programming skills](#web-programming-skills)
 >>> - [Understand and demonstrate test-driven development](#test-driven-development)
 >>> - [Understand and manage technical debt](#technical-debt)
->>> - Understand and navigate the complexity associated with enterprise-level development
+>>> - [Understand and navigate the complexity associated with enterprise-level development](#enterprise-level-development)
 >>> - Understand how to use version control for all elements of the software delivery lifecycle
 >>> - [Understand, articulate, and demonstrate clean coding behaviors](#understand-articulate-and-demonstrate-clean-coding-behaviors)
 
@@ -1640,6 +1640,142 @@ According to a research paper titled [“Towards an Ontology of Terms on Technic
 	- Incomplete Tests
 	- Low coverage
 		- Tests only cover a small amount of code
+
+---
+
+# Enterprise-level Development
+
+## Business of Architecture
+The basic goals of enterprises are to:
+- Attract Investment
+- Research and Development
+- Build business connections
+- Employ a plethora of smart individuals
+- Compete in the global economy
+
+In large enterprises, developing software can get complicated. Multiple projects being worked on with a large amount of people involved. How do they organize everything?
+- Create blueprints for the various projects
+	- Design in a way to show how the various "pieces of the puzzle" connect to each other to create the desired outcome
+- Make sure everyone understands the goals of the Enterprise
+	- A proper business architecture allows important decision makers to operate based upon a shared understanding of the enterprise's goals
+
+
+## Maps of Business Architecture
+**Capability Maps**
+- Shows the capabilities that an enterprise possesses
+
+**Information Maps**
+- Information that is used to manage the business
+
+**Initiative Maps**
+- Equips an enterprise with visibility of all their initiatives
+- Helps enterprises strategy with prioritization of which business initiative will yield the best outcome
+
+**Organization Maps**
+- Informs enterprises of the various internal departments as well as third-party vendors that are involved in business operations
+
+**Stakeholder Maps**
+- Informs the enterprise of the stakeholders that are participating
+
+**Strategy Maps**
+- A way for enterprises to develop a thorough plan to make top-level decisions
+
+**Value Maps**
+- A way to visualize how value is added to an enterprise
+
+
+## Technical Architecture
+**Infrastructure Architecture**
+- Server hardware
+	- CPU
+	- GPU
+	- RAM
+	- I/O
+	- Network connectivity
+	- Power supply
+- Storage
+	- Storage Networks
+	- Storage compression software
+	- Storage Media
+	- Storage Interface Protocol
+- Data Centers
+	- Physical Racks for servers
+	- Networking cables and cable management
+	- Power/electricity
+	- Environment Control Systems
+- Networking infrastructure
+	- WAN
+		- Wide-area Network
+	- LAN
+		- Local-area Network
+- End User devices
+	- Personal desktops and/or laptops
+	- Cell phones
+	- Tablets
+
+
+**Information Architecture**
+- Focus on organizing, structuring, and labeling things in an effective way
+- Develop information based systems
+- A way to organize all the information an enterprise has and evolve it to meet the demands of tomorrow
+
+**Security Architecture**
+- The systems in place to guard an enterprise's secrets and information
+- Seven Security Attributes
+	- Accountability
+	- Authentication
+	- Access Control
+	- Availability
+	- Confidentiality
+	- Integrity
+	- Safety
+
+**Shared Nothing (SN) Architecture**
+- A method of distributing computing architecture so that each node is independent of each other and don't share memory with one another
+
+## Cloud Native Applications
+**APIs**
+- Restful (REST) design
+	- REpresentational State Transfer
+- Encryption key for access
+- JSON data format
+
+**Microservices**
+- Dividing an application into a collection of services
+	- Maintainable
+	- Testable
+	- Loosely coupled
+	- Independently deployable
+- APIs fit them together
+
+## Cloud Computing
+- On-demand computer system resources
+	- Storage
+	- Computing power
+- Allows for quick provisioning of computers when the demand arises without having to spend thousands of dollars and spending days or weeks manually configuring computers
+
+## Data Domains
+- Can mean either database management or database governance
+- Database management
+	- Represents the collection of values that a data element may contain
+- Database governance
+	- A logical grouping of items or areas of interest within an enterprise
+
+## Big Data
+- Datasets that are too large or complex to be handled by traditional data processing
+- The vast amount of data points allow for enterprise's to process trends, patterns, and links that normally wouldn't be found
+
+**Volume**
+- The amount of data that is stored
+
+**Velocity**
+- How fast data is collected and processed
+
+**Variety**
+- Structured data
+	- Can be organized neatly within the columns of a database
+- Unstructured data
+	- Difficult to sort and extract value from
 
 ---
 
