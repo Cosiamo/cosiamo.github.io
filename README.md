@@ -57,7 +57,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Understand and demonstrate test-driven development](#test-driven-development)
 >>> - [Understand and manage technical debt](#technical-debt)
 >>> - [Understand and navigate the complexity associated with enterprise-level development](#enterprise-level-development)
->>> - Understand how to use version control for all elements of the software delivery lifecycle
+>>> - [Understand how to use version control for all elements of the software delivery lifecycle](#version-control-in-the-software-delivery-lifecycle)
 >>> - [Understand, articulate, and demonstrate clean coding behaviors](#understand-articulate-and-demonstrate-clean-coding-behaviors)
 
 ---
@@ -1779,11 +1779,98 @@ In large enterprises, developing software can get complicated. Multiple projects
 
 ---
 
+# Version Control in the Software Delivery Lifecycle
+
+Version control, a.k.a source control, is a practice that allows software development teams to track changes to the code and manage those changes quickly. The most common version control tool is *git*, however there are others, such as *Subversion* (SVN), *Mercurial*, and many more.
+
+**The Benefits**
+- Quality
+	- Software developers can proof-read each others code
+- Acceleration
+	- Branching code and making changes happens much faster with version control
+- Visibility
+	- Allows for greater collaboration
+- Safety
+	- Helps development teams avoid using duplicate code or use outdated versions of the software
+
+## Important Things Version Control Offers
+- Concurrent Development
+	- Multiple developers and designers have the ability to work on the same files
+- Automation
+	- [Continuous Integration](#continuous-integration)
+- Team Collaboration
+	- Allows developers from all over the world contribute to the code base
+- Tracked Changes
+	- Who made the changes
+	- What changes did they make
+	- When did they made the changes
+	- Why they made the changes
+- Availability and Disaster Recovery
+	- Have systems in place to have backups of the code base
+	- If something happens to the repository you need to have an up-to-date backup
+- Baselines, Labels, and Tags
+	- Distinct snapshots of the code base that enables teams to navigate throughout the different versions of the software's history
+	- Each repository revision is essentially a snapshot of the file system
+
+## Versioning
+- The practice of giving a unique number to each state of your code base
+	- New projects typically start at version 0.1.0
+	- Some projects start at 1.0.0 if:
+		- The software is already used in production
+		- Need the ability for backwards compatibility
+- The process of versioning is useful to keep track of the different versions of code
+
+**Semantic Versioning**
+- A better numbering scheme that contains useful information
+- Each part of the version number has a defined meaning
+- Version 5.1.2 -> X.Y.Z
+	- X. = *Major Version*
+		- Incremented whenever major architectural changes are made
+		- API become incompatible because of the changes
+	- Y. = *Minor Version*
+		- Incremented whenever minor changes are made
+		- Does not break the API like a new feature would
+	- Z. = *Patch Version*
+		- Incremented whenever there are bug fixes
+	- So 5.1.2 means
+		- 5th major release
+		- 1 minor change was made to the 5th release
+		- 2 bug fixes
+
+## Distributed Version Control Systems (DVCS)
+- Tracks changes on a local machine
+- Each developer has a their own copy of the repository
+- Need to push and pull changes to a code hosting service if you want to collaborate with a team
+	- GitHub
+	- GitLab
+	- Bitbucket
+- Fully mirrors repository including it's history
+	- Each repository clone is a complete backup
+
+## Centralized Version Control Systems (CVCS)
+- Forces developers to use a a single shared repository held on a server
+- Allows for streamlined collaboration
+- Every developer commits to the main branch
+- Because of quick communication it prevents multiple developers from working on the same code simultaneously
+- Admins have much greater control of who can do what
+
+## Linear Development
+- All commits happen one after another
+- There are no merges with independent commit histories
+- This method keeps a clean history of changes
+
+## Non-linear Development
+- Enables teams to create thousands of parallel branches running on multiple systems
+- Teams can create and merge branches while navigating backwards and forwards throughout the version history
+
+
+---
+
 # Understand, articulate, and demonstrate clean coding behaviors
 
 There are many reasons why you should write clean code, the most important reason is the readability of your code. Reading code can be much more difficult than writing code. Whether it's your coworkers, contributors to your open source project, or even yourself if your're refactoring code that you originally wrote weeks ago.
 
-#### There are few techniques to writing cleaner code:
+### There are few techniques to writing cleaner code:
 
 - Naming Conventions
 	- Decide how you'll name your variables and stick to a set of rules.
