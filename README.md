@@ -42,7 +42,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Demonstrate strong communication skills](#communication)
 >>> - [Understand and demonstrate social coding behaviors](#social-coding-behaviors-and-shared-github-repository)
 >>> - [Understand and model good feedback behaviors](#giving-and-receiving-feedback)
->>> - Understand, articulate, and demonstrate agile principles and practices
+>>> - [Understand, articulate, and demonstrate agile principles and practices](#agile-principles-and-practices)
 >>> - Understand, articulate, and demonstrate IBM Design Thinking
 >>>
 >>> ### Professional Skills Development
@@ -1094,6 +1094,82 @@ app.get("/express_backend", (request, response) => {
 >    - setUpTests.js
 
 The code I wrote originally only logged the titles and links to the articles in the terminal, but thanks to Johnnie, those are now on a web page.
+
+---
+
+# Agile Principles and Practices
+In the 1980s and 1990s, most software failed to be useful to the average person. A lot of it was built over budget and missed deadlines quite frequently. The fast growing market in the early days of the personal computer came with demands and expectations that far outweighed the capacity that software development teams had to build software as it was needed. Many analysts in the industry conducted experiments to find the cause of this "climate of failure" and found that the waterfall development model was to blame.
+
+**Waterfall Model**
+- Projects were broken down into linear sequential phases
+	- Referred to as a linear-sequential life cycle method
+- Each phase depends on the what is delivered from the previous phase
+	1. Requirement analysis
+	2. System design
+	3. Implementation
+	4. Testing
+	5. Deployment
+	6. Maintenance
+
+Because the software development life cycle of the Waterfall Model progressed in one direction, it was not very flexible. As a result of these shortcomings, 17 software developers came together in 2001 to create **The Agile Manifesto**, which lays down the foundations of Agile Principles and Practices.
+
+## The Agile Manifesto
+The 17 authors of The Agile Manifesto couldn't agree on everything, however, they did agree on four core values.
+
+**Four Core Values**
+- *Individuals and interactions* over processes and tools
+- *Working software* over comprehensive documentation
+- *Customer collaboration* over contract negotiation
+- *Responding to change* over following a plan
+
+According to The Agile Manifesto, there are 12 principles that need to be followed in order for the Agile methodology to work.
+
+**The 12 Agile Principles**
+1. Satisfy the customers through early and continuous delivery of valuable software
+2. Welcome changing requirements, even late in development
+	- Agile processes harness change for the customer’s competitive advantage
+3. Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale
+4. Business people and developers must work together daily throughout the project
+5. Build projects around motivated individuals
+	- Give them the environment and support they need, and trust them to get the job done
+6. The most efficient and effective method of conveying information to and within a development team is face-to-face conversation
+7. Working software is the primary measure of progress
+8. Agile processes promote sustainable development
+	- The sponsors, developers, and users should be able to maintain a constant pace indefinitely
+9. Continuous attention to technical excellence and good design enhances agility
+10. Simplicity
+	- Maximizing the amount of work not done is essential
+1. The best architectures, requirements, and designs emerge from self-organizing teams
+2. At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly
+
+## Agile Practices
+Agile Practices take form in the Agile Development Model. This model takes all of the Agile Principles and breaks it down into multiple types of development frameworks. A few examples of these are:
+
+**Scrum**
+- An administration framework for project development
+- The system is developed incrementally in sprints
+	- Usually anywhere from 2 to 4 weeks
+- Groups are cross-functional and self-organizing
+- Use visual graphs to track the improvements of the project
+
+**Extreme Programming**
+- An engineering technique that includes practices that will assure a high quality product
+- Teams work in iterations which are typically a couple weeks long
+- Four ideals:
+	- Communication
+	- Feedback
+	- Simplicity
+	- Courage
+- Solely focusing on developing programs and never visualizing improvements with visual aids
+
+**Feature Driven Development**
+- Organizes software development around making progress on features
+- Typical project life cycle:
+	- Develop a general model
+	- Make a list of features
+	- Plan for each feature
+	- Design each feature
+	- Build the feature
 
 ---
 
