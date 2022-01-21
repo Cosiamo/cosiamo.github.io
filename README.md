@@ -43,7 +43,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Understand and demonstrate social coding behaviors](#social-coding-behaviors-and-shared-github-repository)
 >>> - [Understand and model good feedback behaviors](#giving-and-receiving-feedback)
 >>> - [Understand, articulate, and demonstrate agile principles and practices](#agile-principles-and-practices)
->>> - Understand, articulate, and demonstrate IBM Design Thinking
+>>> - [Understand, articulate, and demonstrate IBM Design Thinking](#ibm-design-thinking)
 >>>
 >>> ### Professional Skills Development
 >>> - [Complete Ways of Thinking module in Apprenticeship Skills Launchpad](#ways-of-thinking-module)
@@ -1170,6 +1170,55 @@ Agile Practices take form in the Agile Development Model. This model takes all o
 	- Plan for each feature
 	- Design each feature
 	- Build the feature
+
+---
+
+# IBM Design Thinking
+IBM Design Thinking is a human-centered, scalable framework designed to help teams understand their customers and continuously deliver products. The core concept is to prioritize users over anything else. It relies on using empathy while observing how people interact with their environments. Instead of designing a a project around it's structural components or technical requirements, it focuses on how to help a user achieve a specific goal.
+
+According to IBM's documentation, these are the foundational elements of design thinking:
+
+## The Principles
+**Focus on user outcomes**
+- Measure success based on how well we fulfill human needs
+- Users are more than just customers, but design partners as well
+
+**Restless reinvention**
+- Everything is a prototype
+- Continuous conversation with users and clients
+- Respond to changing needs through rapid prototyping and constant iteration
+
+**Diverse empowered teams**
+- Diversity is the bedrock of a dynamic team
+- By empowering people with different backgrounds, perspectives, and skillsets to bring their unique points of view to the table, it enables everyone to generate more breakthrough ideas faster
+
+## The Loop
+**Observe**
+- To create meaningful outcomes for the users, we need to understand what challenges thy face in their daily lives
+- By immersing ourselves in the worlds of our users, we ensure that our solutions always address real-world needs
+
+**Reflect**
+- Different people can interpret the same situation in very different ways
+- Having those different perspectives come together to reflect on observations helps synthesize and analyze findings, building more nuanced understanding of our users across the team
+
+**Make**
+- The only way to see an outcome is to make one
+- Rapid, low-fidelity prototyping allows us to simulate ideas and test hypotheses quickly and cheaply
+- This creates solutions that are robust, effective, and battle-tested
+
+## The Keys
+**Hills**
+- Concise statements of goals we aim to help our users accomplish
+- By making these goals explicit and evaluating them regularly, we align teams around a single shared mission
+
+**Playbacks**
+- Regular check-ins that bring users, stakeholders, and teams together to exchange feedback
+- Allow us to to measure progress on a regular basis
+- Uncovers and addresses any misalignment that may exist
+
+**Sponsor Users**
+- Sponsor users are real-world users that provide teams with deep expertise and knowledge on problems they're facing
+- They're crucial to keeping us aligned with our users' reality throughout the course of a project
 
 ---
 
