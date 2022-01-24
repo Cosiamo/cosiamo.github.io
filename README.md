@@ -890,7 +890,7 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 
 # The Topologies of Enterprise Solutions and How Clients Use Our Portfolio of Products and Services Together
 
-IBM has been an industry leader for over a century, and as a result, we offer many products and solutions. However, IBM adapts it's business model to best serve it's clients with the newest technologies and innovations. The past few years there has been a strong focus on **Hybrid Cloud**, **Artificial Intelligence** (AI), and in the not-so-distant future, **Quantum Computing**. IBM has dedicated so much to these technologies that we recently split our other legacy IT services to our new sister company, Kyndryl.
+IBM has been an industry leader for over a century, and as a result, we offer many products and solutions. However, IBM adapts it's business model to best serve it's clients with the newest technologies and innovations. The past few years there has been a strong focus on **Hybrid Cloud**, **Artificial Intelligence** (AI), and **Quantum Computing**. IBM has dedicated so much to these technologies that we recently split our other legacy IT services to our new sister company, Kyndryl.
 
 ## Hybrid Cloud
 - *Hybrid Cloud* is a combination of public cloud, private cloud, and on-premise infrastructure that are seamlessly integrated
