@@ -631,7 +631,7 @@ Microsoft, just like most major cloud vendors, has their own best practices reco
 # Logging and Monitoring
 Logging the activity of your application is vital in understanding how your users interact with the application as well as monitoring the status of the application itself. There are a few best practices to remember in order to have a good log.
 
-#### Four dimensions of a good log
+## Four dimensions of a good log
 - Context
 - Purpose
 	- Debugging
@@ -711,13 +711,13 @@ got data
 - The error shows that there are too many connections
 - The data that was received shows that a specific IP address was pinging the application 46 times
 
-#### Logging Golden Rules
+## Logging Golden Rules
 There's more to creating a good log than writing out the log itself. You also have to make sure the information inside the log follows best practices as well. An easy way to figure this out is to follow the three **Logging Golden Rules**:
 - Remember the reader
 - No Personal Data
 - Answer the Question!
 
-#### The Logging Type Table
+## The Logging Type Table
 To expand more on the **Logging Golden Rules** it helps to understand **The Logging Type Table**.
 
 | Name | Goal | Question | Content | Audience |
@@ -760,7 +760,7 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 	- Look at the data from different angles
 - This information is very useful for the compliance team, government regulators, and businesses
 
-#### Common Tools
+## Common Tools
 - Log4j
 - Syslog standard
 - Count.ly
@@ -778,7 +778,7 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 
 # Migration of Data from On-Premise to Cloud Solutions and the Implications
 
-#### Deployment
+### Deployment
 **On-Prem:**
 - The entire infrastructure is located on your property
 - Everything is controlled by the IT team on staff
@@ -788,7 +788,7 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 - The infrastructure is on the premises of whichever company you purchased your cloud subscription from
 - you can access all the resources you use and use as much as you want at anytime
 
-#### Cost
+### Cost
 **On-Prem:**
 - Purchase all server hardware
 - Pay the electricity bill
@@ -799,7 +799,7 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 - No maintenance and upkeep cost
 - Price is determined by how much is used
 
-#### Control
+### Control
 **On-Prem:**
 - You retain and control all of your data
 - Better for highly sensitive data
@@ -809,7 +809,7 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 - Risk of downtime out of your control
 - Third-party can hold some of your encryption keys
 
-#### Security
+### Security
 **On-Prem:**
 - Organizations with sensitive information should use an on-premise server
 	- Hospitals
@@ -825,7 +825,7 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 
 # Relationship Between Scaling Techniques
 
-### AutoScaling
+## AutoScaling
 - A feature that allows organizations to scale their cloud services automatically
 - Allows organizations to scale up or down based upon external traffic or internal utilization
 - No need for manual intervention during spikes in traffic
@@ -848,7 +848,7 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
     - Scaling by adding more power rather than more servers
     - Additional RAM, CPU, or storage
 
-### Fail Fast
+## Fail Fast
 - Process of starting a project, gathering feedback, then determining if you should continue the current work, take an alternative approach, or abandon the project
 - This method allows teams to experiment with new ideas more often
 
@@ -857,14 +857,14 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 - Makes the team  working on the project more efficient
 - Reduces the amount of wasted time, energy, and cost
 
-### ReplicaSets
+## ReplicaSets
 - ReplicaSets are Kubernetes controllers that are meant to manage a set of replica pods and keep them running at all times
 	- Will add or delete pods based upon what's needed
 - A pod must be labeled with a matching label to the ReplicaSet selector
 	- Pods can be isolated from a ReplicaSet by changing their labels so that they no longer match the ReplicaSet’s selector
 - Can replicate pods and restart or spin up new pods when ones that already exist fail
 
-### Scale up
+## Scale up
 - Scaling up is when you purchase more powerful hardware to scale your project
 	- CPU
 	- RAM
@@ -878,7 +878,7 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 - A way to think of scale up:
 	- Buying a *larger* refrigerator when you start to run out of room for food
 
-### Scale out
+## Scale out
 - Scaling out is when you use software to scale to more than one server
 	- Each server is considered a node
 - One way to scale out is by creating a new container running a web-server app and adding it to the load balancer pool
@@ -1342,7 +1342,7 @@ According to IBM's documentation, these are the foundational elements of design 
 
 # Key Computer Programming Fundamentals
 
-#### Functions
+### Functions
 - A block of reusable code that was created to perform a task
 
 ```javascript
@@ -1351,7 +1351,7 @@ const square = function(x){
 };
 ```
 
-#### Objects
+### Objects
 - An abstract data type that can include properties, methods, and other objects
 
 ```javascript
@@ -1362,11 +1362,11 @@ const car = {
 };
 ```
 
-#### Methods
+### Methods
 - A subroutine from a class that is predefined in the source code of a program
 - defines the behavior of a class
 
-#### Arrays
+### Arrays
 - An ordered collection of multiple items of the same type stored together indexed by contiguous integers
 
 ```javascript
@@ -1377,7 +1377,7 @@ const pets = [
 ];
 ```
 
-#### Variables
+### Variables
 - A malleable storage location which contains information (data or code)
 - Typically the name of the variable will reference the information it contains
 
@@ -1393,7 +1393,7 @@ const pets = [
 ];
 ```
 
-#### Loops
+### Loops
 - **For Loops**
 	- Enables a set of conditions to be executed repeatedly until a condition is satisfied
 	- Repeats a unit of code a known number of times
@@ -1414,7 +1414,7 @@ while (i < 10) {
 }
 ```
 
-#### Errors
+### Errors
 -  **Logic Error**
 	-  A type of error that is the result of improper logic in code that was written
 	-  Can cause unexpected results
@@ -1425,17 +1425,17 @@ while (i < 10) {
 	-  An error that occurs while the program is running after being successfully compiled
 	-  Often referred to as bugs
 
-#### Debugging
+### Debugging
 - The process of detecting and removing bugs, aka, errors
 
-#### Data Structures
+### Data Structures
 - A way to store and retrieve data so that a computer can use it effectively
 
-#### Recursion
+### Recursion
 - The process of defining a problem or a solution in simpler terms
 - Take one big problem and break it down into smaller problems
 
-#### Pseudocode
+### Pseudocode
 - A method of creating instructions (algorithms) in a human readable format
 - "fake code"
 
@@ -1525,7 +1525,7 @@ There's many things to take into consideration when designing software. It's not
 
 Using design principles will help you come up with a plan to structure your design.
 
-#### Divide & Conquer
+## Divide Up the Tasks
 -   Take one large problem and break it down into as many sub-problems as possible
 -   As you solve the smaller problems it will help you solve the larger problem
 -   Let's say you're working on a large scale system
@@ -1539,7 +1539,7 @@ Using design principles will help you come up with a plan to structure your desi
 		-   figure out what all the methods of the class are
 	-   Methods might use some external dependencies or functions  
 
-#### Cohesion
+## Cohesion
 -   Everything grouped together makes sense
 -   Designing in a way that everything relates to each other so that nothing doesn't fit in
 -   Designing packages, modules, and classes so that everything is cohesive
@@ -1552,10 +1552,10 @@ Using design principles will help you come up with a plan to structure your desi
         -   add
         -   etc...
 
-#### Avoid Coupling
+## Avoid Coupling
 -   I go over this in the [Feature Decoupling](#feature-decoupling) section
 
-#### Abstraction
+## Abstraction
 -   Something that is more generalized
 -   Example:
 
@@ -1579,7 +1579,7 @@ Vehicle.prototype.display = () => {
 }
 ```
 
-#### Reusability
+## Reusability
 -   Make code reusable
 -   An example of this would be a header for a website
 	-   Instead of typing out a header for each page, create a header component and call it at the top of every page
@@ -1611,12 +1611,12 @@ const AppRouter = () => (
 );
 ```
 
-#### Flexibility
+## Flexibility
 -   Anticipate that your system is going to change in the future
 -   The application may be simple now but in the future it may get much more complex
 -   A month or a year after you create a project you may need to scale up and if you need to add packages or modules you will need to plan for that ahead of time so you don't have to change the entire code base
 
-#### Anticipate Obsolescence
+## Anticipate Obsolescence
 -   Avoid early release and versions of software
 -   Use software from reputable companies
 -   Use as few external dependencies as possible
@@ -1628,15 +1628,15 @@ const AppRouter = () => (
     -   May not have updates
     -   May have bugs that aren't going to be fixed
 
-#### Portability
+## Portability
 -   Anticipate that the design or the system you're creating right now may be used om a different platform or device than you're currently targeting
 -   If you're making a web app, you may also want to make it a IOS or Android app
 -   If you don't factor in portability, it may result in changing the application or creating an entirely new application to port it over
 
-#### Testability
+## Testability
 -   I go over this in the [Test Driven-Development](#test-driven-development) section.
 
-#### Design Defensively
+## Design Defensively
 
 -   Idiot-proof your code
 -   Have good error messages
@@ -2076,7 +2076,7 @@ Version control, a.k.a source control, is a practice that allows software develo
 
 There are many reasons why you should write clean code, the most important reason is the readability of your code. Reading code can be much more difficult than writing code. Whether it's your coworkers, contributors to your open source project, or even yourself if your're refactoring code that you originally wrote weeks ago.
 
-### There are few techniques to writing cleaner code:
+## There are few techniques to writing cleaner code:
 
 - Naming Conventions
 	- Decide how you'll name your variables and stick to a set of rules.
