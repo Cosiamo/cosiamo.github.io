@@ -33,7 +33,7 @@ This site was created by Joshua Becnel to submit the necessary requirements in o
 >>> - [Understand and demonstrate the use of logging and monitoring tools and infrastructure](#logging-and-monitoring)
 >>> - [Understand the need for mobility and migration of data from on-premise to cloud solutions, and the implications](#migration-of-data-from-on-premise-to-cloud-solutions-and-the-implications)
 >>> - [Understand the relationship between scaling techniques, how to exploit them, and where](#relationship-between-scaling-techniques)
->>> - Understand the topologies of enterprise solutions, and how clients use our portfolio of products and services together
+>>> - [Understand the topologies of enterprise solutions, and how clients use our portfolio of products and services together](#the-topologies-of-enterprise-solutions-and-how-clients-use-our-portfolio-of-products-and-services-together)
 >>> - [Understand the various platforms, their differences, relative strengths / weaknesses, and integrations](#the-various-cloud-platforms)
 >>>
 >>> ### Principles and Practices
@@ -886,6 +886,87 @@ To expand more on the **Logging Golden Rules** it helps to understand **The Logg
 - A way to think of scale out:
 	- Buying *more* refrigerators when you start to run out of room for food
 
+---
+
+# The Topologies of Enterprise Solutions and How Clients Use Our Portfolio of Products and Services Together
+
+IBM has been an industry leader for over a century, and as a result, we offer many products and solutions. However, IBM adapts it's business model to best serve it's clients with the newest technologies and innovations. The past few years there has been a strong focus on **Hybrid Cloud**, **Artificial Intelligence** (AI), and in the not-so-distant future, **Quantum Computing**. IBM has dedicated so much to these technologies that we recently split our other legacy IT services to our new sister company, Kyndryl.
+
+## Hybrid Cloud
+- *Hybrid Cloud* is a combination of public cloud, private cloud, and on-premise infrastructure that are seamlessly integrated
+	- Provides better management and greater application portability
+- It is a single, unified, and flexible environment while each type of cloud model remains as it's own separate entity
+- Allows organizations to run and scale traditional or cloud-native services on whichever model suits their specific needs
+
+**Advantages**
+- Improved developer productivity
+	- Helps development teams adopt Agile and DevOps methodologies
+	- Develop once and deploy to all clouds
+- Greater infrastructure efficiency
+	- Allows development teams to have greater control over their resources, development, and IT operations
+	- Optimize synchronization across public cloud, private cloud, and cloud vendors
+	- Teams can modernize applications faster
+	- Teams can connect cloud services to data on cloud or on-premise servers to drive greater efficiency
+- Improved regulatory compliance and security
+	- Organizations can keep sensitive information on-premise while having the benefits of scalability that cloud services offer
+	- Allows the ability to implement regulatory compliance across all environments
+- Overall business acceleration
+	- The efficiency of the hybrid cloud model enables shorter software development life cycles
+	- Accelerates the time to implement new features and time-to-market
+	- Faster third party integration
+
+## Artificial Intelligence
+- *Artificial Intelligence*, by definition, is intelligence demonstrated by machines
+	- Any system that can perceive it's environment and take the necessary actions to achieve it's goals
+- Alan Turing, who is considered the father of computer science and artificial intelligence, proposed an experiment referred to as the Turing Test
+	- The idea is that if a machine is truly intelligent, a human interrogator wouldn't be able to tell the difference between a human's response and a computer's response
+	- Although this test would later be scrutinized, it is still considered an important part of the history of AI research as it helped evolve how humans think about our relationship with computers
+- IBM has been a leader in AI innovation for enterprises
+	- IBM Watson offers AI tools to enterprises that significantly improve their workflows, enhance automation, and increase efficiency
+- One key concept that has enabled IBM to be at the cutting edge of AI implementation is the AI Ladder
+
+**AI Ladder**
+- Artificial Intelligence
+- Machine Learning
+- Analytics
+- Data and Information Architecture
+
+**Services IBM Watson Delivers on for AI Needs**
+- Advertising
+- Business automation
+- Customer service
+- Explainable AI
+- Financial operations
+- Healthcare
+- IT operations
+- Natural language processing
+- Return to work
+- Risk and compliance
+- Security
+- Supply chain
+- Video
+- and much more...
+
+## Quantum Computing
+- *Quantum Computing* is a type of computation that utilizes quantum physics to perform advanced calculations and difficult computations
+- They do this by using the properties of quantum state, such as:
+	- Superposition
+	- Interference
+	- Entanglement
+- Computers, at the base level, are able to execute commands from the user by reading binary
+- Traditional CPUs read the state as either 0 *or* 1
+	- Known as bits
+- Quantum CPUs are able to be 0 *and* 1 at the same time
+	- These are called qubits
+- IBM introduced the first commercial quantum computer, the IBM Q System One, in 2019
+	- At the time it was only 20 qubits
+	- The new Eagle processor will have 127 qubits
+
+**IBM Quantum Services**
+- IBM Quantum Services allows users to run circuits 120 times faster
+- Over 20 systems available
+	- Hardware, systems, simulators, and runtimes
+- Access to APIs and programming tools
 
 ---
 
